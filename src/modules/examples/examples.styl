@@ -1,0 +1,59 @@
+.examples
+  background-color: #f7f8fa
+  padding: 115px 0 76px
+  position: relative;
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 75px 0 80px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 65px 0 48px
+  @media (max-width: $breakpoint-sm - 1)
+    padding: 50px 0 40px
+
+  &--texture
+    &:before
+      content: ''
+      position: absolute;
+      background: url(./examples-bg-texture.png) 50% 100% no-repeat
+      left: 0
+      right: 0
+      height: 569px
+      bottom: 0
+      @media (max-width: $breakpoint-lg - 1)
+        background-image: none;
+        display: none;
+
+  &__title
+    font-size: 40px
+    margin-bottom: 82px
+    @media (max-width: $breakpoint-lg - 1)
+      text-align: center;
+      margin-bottom: 65px
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 36px
+      margin-bottom: 45px
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 24px
+      margin-bottom: 40px
+
+  &__slider
+    overflow: hidden;
+    @media (max-width: $breakpoint-md - 1)
+      margin: 0 -10px
+
+  &__items
+    display: flex;
+
+  &__item
+    flex-shrink 0
+
+  &__pagination
+    position: absolute;
+    right: 50%
+    margin-right: -647px
+    top: 135px
+    display: flex;
+    @media (max-width: $breakpoint-lg - 1)
+      position: static;
+      width: 100%
+      justify-content center
+      margin-top: 39px

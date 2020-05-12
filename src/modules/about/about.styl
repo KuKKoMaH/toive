@@ -1,0 +1,206 @@
+.about
+  padding: 182px 0 114px
+  position: relative;
+  background-color: #f7f8fa
+  @media (max-width: $breakpoint-lg - 1)
+    background: #f7f8fa
+    padding: 36px 0 30px;
+  @media (max-width: $breakpoint-md - 1)
+    padding: 37px 0 30px;
+  @media (max-width: $breakpoint-sm - 1)
+    padding: 31px 0 30px;
+
+  &:before, &:after
+    content: ''
+    position: absolute;
+
+  .c
+    position: relative;
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+      background: #dfb47a
+      z-index: 1
+      left: 10px
+      bottom: 0
+      @media (max-width: $breakpoint-lg - 1)
+        display: none;
+
+    &:before
+      width: 10px
+      height: 38px
+
+    &:after
+      width: 33px
+      height: 10px
+
+  &--front
+    background: #ffffff
+    padding: 187px 0 138px
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 237px 0 103px
+    @media (max-width: $breakpoint-md - 1)
+      padding: 203px 0 35px
+    @media (max-width: $breakpoint-sm - 1)
+      padding: 44px 0 26px
+
+    &:before
+      left: 0
+      width: calc(50% + 177px)
+      top: 0
+      background: #f7f8fa
+      height: 100%
+      //z-index: -1
+      @media (max-width: $breakpoint-lg - 1)
+        width: 100%
+
+    .about
+      &__content
+        background: #f7f8fa
+        padding: 76px 110px 45px 49px
+        @media (max-width: $breakpoint-lg - 1)
+          padding: 0 41px
+          border: 0
+        @media (max-width: $breakpoint-md - 1)
+          padding: 0
+          text-align: center;
+
+        &:before
+          left: 50%
+          border-left: 1px solid #e1e3e6
+
+      &__title
+        @media (max-width: $breakpoint-sm - 1)
+          display: none;
+
+  &--facing
+    padding: 182px 0 114px
+
+  &--networks
+    padding: 182px 0 222px
+
+  &--fundament
+    padding: 156px 0 23px
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 36px 0 8px;
+    @media (max-width: $breakpoint-md - 1)
+      padding: 37px 0 30px;
+    @media (max-width: $breakpoint-sm - 1)
+      padding: 31px 0 30px;
+
+    .about
+      &__content
+        padding: 29px 110px 3px 42px
+        @media (max-width: $breakpoint-lg - 1)
+          padding: 27px 20px 9px 33px
+
+      &__image
+        margin-top: -31px
+
+  &:after
+    background: url(../../images/sprite-toive.png)
+    left: 50%
+    margin-left: 582px
+    top: 227px
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+  &__content
+    max-width: 735px
+    border: 10px solid #e1e3e6
+    position: relative
+    padding: 39px 110px 20px 46px;
+    @media (max-width: $breakpoint-lg - 1)
+      border-width 7px
+      padding: 27px 33px 14px
+    @media (max-width: $breakpoint-md - 1)
+      //text-align: center;
+      padding: 27px 29px 7px
+    @media (max-width: $breakpoint-sm - 1)
+      padding: 21px 20px 2px
+
+    &:before, &:after
+      content: ''
+      display: block;
+      position: absolute;
+      pointer-events none
+      @media (max-width: $breakpoint-lg - 1)
+        display: none;
+
+    &:before
+      top: 10px
+      right: 0
+      left: 0px
+      height: 1px
+      background: #e1e3e6
+
+    &:after
+      z-index: -1
+      left: 10px
+      right: -30px
+      bottom: -30px
+      top: 10px
+      border: 1px solid #e1e3e6
+      border-top: 0
+      border-left: 0
+
+  &__title
+    font-size: 40px
+    background: #f7f8fa
+    position: absolute;
+    top: -31px
+    left: 37px
+    padding: 0 20px
+    @media (max-width: $breakpoint-lg - 1)
+      position: static;
+      padding: 0
+      margin-bottom: 29px
+
+  &__subtitle
+    font-size: 24px
+    font-weight: 500
+    line-height: 1.5
+    margin-bottom: 33px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 23px
+    @media (max-width: $breakpoint-sm - 1)
+      margin-bottom: 18px
+
+  &__text
+    line-height: 2
+    font-size: 18px
+    font-weight: 300
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+      background: #e1e3e6
+      @media (max-width: $breakpoint-lg - 1)
+        display: none;
+
+    &:before
+      width: 1px
+      height: 20px;
+      left: 10px;
+      bottom: -30px;
+
+  &__image
+    position: absolute;
+    left: 100%
+    margin-left: -75px
+    top: 0
+    margin-top: -57px
+    box-shadow -5px 25px 29px rgba(#000, .1)
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+  &__top
+    position: absolute;
+    bottom: 100%
+    right: 0
+
+  &__left
+    position: absolute;
+    top: 0
+    right: 100%

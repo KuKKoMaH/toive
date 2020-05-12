@@ -1,0 +1,119 @@
+.catalogSubmenu
+  background: url(../choice/choice-bg.jpg) 50% 50%
+  @media (max-width: $breakpoint-lg - 1)
+    position: relative;
+
+  &:before
+    content: ''
+    position: absolute;
+    width: 10px
+    height: 53px;
+    right: -17px;
+    top: 132px;
+    background: #dfb47a
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+  &__slider
+    padding: 37px 30px 26px
+    @media (max-width: $breakpoint-lg - 1)
+      overflow: hidden;
+    @media (max-width: $breakpoint-sm - 1)
+      padding-left: 0
+      padding-right: 0
+
+  &__items
+    display: flex;
+    justify-content space-between
+    @media (max-width: $breakpoint-lg - 1)
+      justify-content flex-start
+
+  &__item
+    flex-shrink 0
+
+    &--active, &:hover
+      .catalogSubmenu
+        &__block, &__inner
+          &:before, &:after
+            opacity: 1
+
+        &__block
+          border-color: #dfb47a
+
+  &__block, &__inner
+    &:before, &:after
+      content: ''
+      position: absolute;
+      height: 6px
+      background: #dfb47a
+      opacity: 0
+      anim()
+
+    &:before
+      left: 0
+
+    &:after
+      right: 0
+
+
+  &__block
+    display: block;
+    width: 305px
+    height: 162px
+    position: relative;
+    border: 6px solid transparent
+    border-top: 0
+    border-bottom: 0
+    anim()
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0 auto
+
+    &:before, &:after
+      width: 49px
+      top: 0
+
+  &__inner
+    &:before, &:after
+      width: 52px
+      bottom: 0
+
+  &__img
+    position: absolute;
+    left: 50%
+    top: -13px
+    transform translateX(-50%)
+    pointer-events none
+
+  &__title
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    bottom: -6px
+    left: 50%
+    white-space nowrap
+    transform translateX(-50%)
+
+  &__pagination
+    display: none;
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex;
+      justify-content center
+    @media (max-width: $breakpoint-sm - 1)
+      margin-top: 30px
+
+    .arrow
+      position: absolute;
+      top: 50%
+      transform translateY(-50%)
+      @media (max-width: $breakpoint-sm - 1)
+        position: static;
+
+      &--left
+        left: 90px
+        @media (max-width: $breakpoint-md - 1)
+          left: 0px
+
+      &--right
+        right: 90px
+        @media (max-width: $breakpoint-md - 1)
+          right: 0px
+

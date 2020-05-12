@@ -1,0 +1,261 @@
+.catalog
+  background-color: #f7f8fa
+  padding: 53px 0 66px
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 24px 0 43px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 33px 0 43px
+
+  &__block
+    position: relative;
+    border: 10px solid #fff
+    padding: 5px
+    @media (max-width: $breakpoint-lg - 1)
+      border 0
+      padding: 0
+
+    &--submenu
+      //margin-top: -10px
+      //@media (max-width: $breakpoint-lg - 1)
+      //  margin-top: 0
+      margin-top: 47px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-top: 0
+
+      &:before, &:after
+        content: ''
+        position: absolute;
+        left: -10px
+        top: -10px
+        background: #dfb47a
+        @media (max-width: $breakpoint-lg - 1)
+          display: none;
+
+      &:before
+        width: 10px
+        height: 44px
+
+      &:after
+        width: 45px
+        height: 10px
+
+  &__inner
+    position: relative;
+    border: 2px solid #fff
+    padding: 3px
+    @media (max-width: $breakpoint-lg - 1)
+      border: 0
+      padding: 0
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+      top: -2px
+      right: -2px
+      background: #dfb47a
+      @media (max-width: $breakpoint-lg - 1)
+        display: none;
+
+    &:before
+      width: 2px
+      height: 37px
+
+    &:after
+      width: 37px
+      height: 2px
+
+  &__content
+    background: #ffffff
+    padding: 25px
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 0
+      flex-direction column-reverse
+    @media (max-width: $breakpoint-sm - 1)
+      margin: 0 -10px
+
+  &__row
+    display: flex;
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
+
+  &__image
+    width: 527px
+    height: 378px
+    flex-shrink 0
+    margin-right: 43px
+    background-size: cover
+    background-position: 50% 50%
+    @media (max-width: $breakpoint-lg - 1)
+      width: 100%
+      height: 268px
+      margin: 0 0 32px
+    @media (max-width: $breakpoint-sm - 1)
+      width: auto;
+      margin: 0 10px 39px
+
+  &__info
+    padding: 6px 0px
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 0 20px
+    @media (max-width: $breakpoint-sm - 1)
+      padding: 0 10px
+
+
+  &__title
+    color: #191f27
+    font-size: 30px
+    margin-bottom: 23px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 7px
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 24px
+      margin-bottom: 28px
+
+
+  &__text
+    font-size: 16px
+    line-height: 1.875
+    font-weight: 300
+
+    > *:last-child
+      margin-bottom: 0
+
+  &__advantagesTitle
+    font-size: 36px
+    line-height: 1.35
+    text-align: center;
+    color: #191f27
+    margin-bottom: 56px
+    margin-top: 24px
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 0 40px
+      margin-bottom: 39px
+      margin-top: 22px
+    @media (max-width: $breakpoint-sm - 1)
+      padding: 0
+      font-size: 24px
+      line-height: 1.5
+
+
+  &__advantagesSlider
+    @media (max-width: $breakpoint-lg - 1)
+      overflow: hidden;
+      margin: 0 18px
+
+  &__advantages
+    display: flex;
+    align-items flex-start
+    justify-content center
+    counter-reset: advantages
+    padding: 0 39px
+    flex-wrap wrap
+    margin-bottom: 21px
+    @media (max-width: $breakpoint-lg - 1)
+      flex-wrap nowrap
+      margin: 0
+      padding: 0
+      justify-content flex-start
+
+  &__advantage
+    position: relative;
+    font-weight: 300
+    padding: 44px 6px 0
+    color: #191f27
+    margin: 0 30px 26px
+    white-space nowrap
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0
+
+    &:before
+      counter-increment: advantages;
+      content: "0" counter(advantages)
+      position: absolute;
+      font-size: 30px
+      font-weight: 700
+      line-height: 1;
+      color: #dfb47a
+      font-family: 'Playfair Display', serif;
+      left: 0px
+      top: 2px
+
+    &:after
+      content: ''
+      position: absolute;
+      width: 54px
+      height: 54px
+      top: 11px;
+      left: 16px;
+      border: 1px solid #dfb47a
+      transform rotate(45deg)
+
+  &__advantagesPagination
+    display: none;
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex;
+      justify-content center
+      padding: 50px 0 62px
+
+  &__offersTitle
+    text-align: center;
+    font-size: 36px
+    line-height: 1.35
+    color: #191f27
+    margin: 55px 0 67px
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 37px 0 39px
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 30px
+      line-height: 1.6
+      margin: 35px 0 49px
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 24px
+      line-height: 1.5
+      margin: 30px 0 33px
+
+  &__headers
+    position: relative;
+    z-index: 1
+    display: flex;
+    margin: 0 -18px 33px
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0 0 20px
+      flex-direction column
+
+  &__header
+    flex: 1
+    margin: 0 18px
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0 0 37px
+
+    &--active
+      & .btn
+        color: #ffffff
+
+        &:after
+          background: #191f27
+          border-color: #191f27
+
+        &:before
+          border-color: #191f27
+
+
+  &__tabs
+    position: relative;
+
+  &__tab
+    position: absolute;
+    left: 0
+    top: 0
+    width: 100%
+    opacity: 0
+    z-index: -1
+    pointer-events none
+    anim(.3s)
+
+    &--active
+      opacity: 1
+      z-index: 1
+      pointer-events all
+      position: static;
+
+

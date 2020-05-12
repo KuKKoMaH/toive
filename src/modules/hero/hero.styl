@@ -1,0 +1,112 @@
+.hero
+  height: 423px
+  background-position: 50% 50%
+  @media (max-width: $breakpoint-lg - 1)
+    height: auto;
+  @media (max-width: $breakpoint-md - 1)
+    height: 271px
+
+  .c
+    height: 100%
+    position: relative;
+
+  &__title
+    position: absolute;
+    height: 191px
+    font-size: 40px
+    color: #ffffff
+    display: inline-block;
+    border: 10px solid #e1e3e6
+    border-top: 0
+    bottom: -33px
+    padding-left: 68px
+    padding-right: 67px
+    z-index: 2
+    @media (max-width: $breakpoint-lg - 1)
+      position: static;
+      border: 0
+      padding-left: 0
+      padding-right: 0
+      margin-top: 120px
+      min-height 180px
+      bottom: 0
+      height: auto;
+      display: flex;
+      align-items center
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 30px
+      min-height 151px
+      br
+        display: none;
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 24px
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+      height: 10px
+      background: #e1e3e6
+      top: 0
+      @media (max-width: $breakpoint-lg - 1)
+        display: none;
+
+    &:before
+      width: 37px
+      left: 0
+
+    &:after
+      width: 35px
+      right: 0
+
+    h1
+      margin-top: -23px
+      color: #ffffff
+      @media (max-width: $breakpoint-lg - 1)
+        margin: 0
+
+      &:before, &:after
+        content: ''
+        position: absolute;
+        background: #dfb37a
+        bottom: -10px
+        left: -10px
+        @media (max-width: $breakpoint-lg - 1)
+          display: none;
+
+      &:before
+        width: 10px
+        height: 38px
+
+      &:after
+        width: 33px
+        height: 10px
+
+  &__decor
+    position: absolute;
+    border: 1px solid #e1e3e6
+    border-top: 0
+    border-left: 0
+    left: 10px
+    right: -30px
+    top: 19px
+    bottom: -30px
+    pointer-events none
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+      background: #e1e3e6
+
+    &:before
+      left: 0
+      bottom: 0
+      width: 1px
+      height: 19px
+
+    &:after
+      right: 0
+      top: 0
+      width: 64px
+      height: 1px

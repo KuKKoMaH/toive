@@ -1,0 +1,13 @@
+extends pug/_layout
+include modules/header/header
+include modules/hero/hero
+
+block body
+  +header(false)
+  +hero('modules/hero/img/hero-bg-blogList.jpg', 'Блог и полезные новости <br/>компании Toive')
+  include modules/blogList/blogList
+  include modules/reserve/reserve
+  include modules/choice/choice
+  include modules/calculate/calculate
+  include modules/places/places
+  include modules/footer/footer

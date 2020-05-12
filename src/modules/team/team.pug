@@ -1,0 +1,27 @@
+.team.lines(class=FRONT_PAGE ? 'team--front' : '')
+  .c
+    h2.team__title Кто будет отвечать за все #[br]эти работы?
+    .team__subtitle Наша команда очень слаженная и сможет выполнить любые поставленные задачи в срок и качественно.
+    .team__slider
+      .team__items
+        .team__item: .team__itemInner
+          .team__image.lazy(data-src='modules/team/img/team-1.jpg')
+          .team__head Игорь
+          .team__text Главный проектировщик#[br] Опыт 15 лет
+        .team__item: .team__itemInner
+          .team__image.lazy(data-src='modules/team/img/team-2.jpg')
+          .team__head Игорь
+          .team__text Главный проектировщик#[br] Опыт 15 лет
+        .team__item: .team__itemInner
+          .team__image.lazy(data-src='modules/team/img/team-3.jpg')
+          .team__head Игорь
+          .team__text Главный проектировщик#[br] Опыт 15 лет
+        .team__item: .team__itemInner
+          .team__image.lazy(data-src='modules/team/img/team-4.jpg')
+          .team__head Игорь
+          .team__text Главный проектировщик#[br] Опыт 15 лет
+
+      .team__pagination
+        button.arrow.arrow--left: svg: use(xlink:href="#icon-slider-arrow")
+        button.arrow.arrow--right: svg: use(xlink:href="#icon-slider-arrow")
+

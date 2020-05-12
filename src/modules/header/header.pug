@@ -1,0 +1,44 @@
+mixin header(withBg, placeholder)
+  if(placeholder)
+    .header__placeholder
+  header.header(class=withBg && 'header--withBg')
+    .header__top.fc: .c
+      a.header__left(href='#')
+        .header__logo
+        .header__text
+          .header__title TOIVE
+          .header__subtitle
+            | СТРОИТЕЛЬСТВО ДОМОВ#[br]
+            | С ФИНСКИМ КАЧЕСТВОМ
+      .header__phone
+        .header__label Необходима консультация? #[span Звоните сейчас!]
+        .header__value +7 (999) 999-99-99
+      .header__mail
+        .header__label Почта для связи:
+        .header__value welcome@toive.ru
+      .header__button меню
+    .header__menu
+      .header__menuTitle Меню
+      .c
+        ul
+          li: a(href='#') О КОМПАНИИ
+          li
+            a(href='#') СТРОИТЕЛЬСТВО ДОМОВ
+            ul
+              li.monolit: a(href='#') Монолитные дома
+              li.kirpich: a(href='#') Кирпичные дома
+              li.gazobeton: a(href='#') Дома из газобетона
+              li.derevo
+                a(href='#') Дома из дерева
+                ul
+                  li.karkas: a(href='#') Каркасные дома
+                  li.brus: a(href='#') Дома из бруса
+                  li.fahverk: a(href='#') Фахверковые дома
+              li.all: a(href='#') Все проекты
+          li: a(href='#') ИНЖЕНЕРНЫЕ СЕТИ
+          li: a(href='#') ОТДЕЛОЧНЫЕ РАБОТЫ
+          li: a(href='#') ФУНДАМЕНТЫ
+          li: a(href='#') АКЦИИ
+          li: a(href='#') ПОСТРОЕННЫЕ ДОМА
+          li: a(href='#') БЛОГ
+          li: a(href='#') КОНТАКТЫ

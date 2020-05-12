@@ -1,0 +1,18 @@
+.reserve
+  .c
+    h2.reserve__title Планируете начать стройку в 2020 году?
+    .reserve__subtitle Оставьте заявку и забронируйте цену 2019 года сейчас!
+    form
+      .reserve__inputs
+        .input
+          svg: use(xlink:href="#icon-phone")
+          input(type='tel' placeholder='Ваш номер телефона:')
+        .input
+          svg: use(xlink:href="#icon-user")
+          input(placeholder='На чье имя зафиксировать стоимость:')
+      .btn ЗАБРОНИРОВАТЬ СТОИМОСТЬ 2019 ГОДА!
+
+    .reserve__img
+      img.reserve__top.lazy(src='modules/reserve/reserve-image_01.png')
+      img.reserve__left.lazy(src='modules/reserve/reserve-image_02.png')
+      img.lazy(src='modules/reserve/reserve-image_03.jpg')

@@ -1,0 +1,481 @@
+.test
+  position: relative;
+  overflow: hidden;
+
+  &:before
+    width: 10px
+    height: 38px
+
+  &:after
+    width: 33px
+    height: 10px
+
+  &__step
+    padding: 100px 0px 60px
+    min-height 675px
+    display: flex;
+    align-items center
+    position: absolute;
+    left: 0
+    top: 0
+    width: 100%
+    opacity: 0
+    z-index: -1
+    transform translateY(50px)
+    anim(.3s)
+    pointer-events none
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 0
+      min-height 0
+      > .c
+        background: #f7f7f7
+
+    &--grey
+      background: #f7f7f7
+
+    &--active
+      position: relative;
+      opacity: 1
+      z-index: 1
+      pointer-events all
+      transform none
+
+    &--static
+      display: block;
+
+    > .c
+      height: 100%
+      display: flex;
+      align-items center
+      flex-direction column
+      position: relative;
+      @media (max-width: $breakpoint-lg - 1)
+        height: auto;
+        display: block;
+
+      &:before, &:after
+        content: ''
+        position: absolute;
+        background: #dfb37a
+        bottom: -0px
+        left: 10px
+        z-index: 1
+        @media (max-width: $breakpoint-lg - 1)
+          display: none;
+
+  &__container
+    font-family: 'Playfair Display', serif;
+    //width: 100%
+    position: relative;
+    border: 10px solid #e1e3e6
+    border-top: 0
+    padding: 4px
+    width: 100%
+    @media (max-width: $breakpoint-lg - 1)
+      border-width: 4px
+      margin: 63px 0 57px
+    @media (max-width: $breakpoint-md - 1)
+      border: 0
+      margin: 66px 0 6px
+    @media (max-width: $breakpoint-sm - 1)
+      margin: 62px 0 6px
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+      height: 10px
+      background: #e1e3e6
+      top: 0
+      @media (max-width: $breakpoint-lg - 1)
+        height: 4px
+      @media (max-width: $breakpoint-md - 1)
+        display: none;
+
+    &:before
+      width: 209px
+      left: 0
+      @media (max-width: $breakpoint-lg - 1)
+        width: 19px
+
+    &:after
+      width: 207px
+      right: 0
+      @media (max-width: $breakpoint-lg - 1)
+        width: 19px
+
+  &__title
+    text-align: center
+    font-size: 36px
+    line-height: 1.3
+    max-width 840px
+    margin: -23px auto 0
+    @media (max-width: $breakpoint-lg - 1)
+      margin-top: -28px
+      max-width 650px
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 30px
+      max-width 470px
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 24px
+
+  &__label
+    position: absolute
+    width: 44px
+    height: 44px
+    line-height: 44px
+    background: #dfb47a
+    font-size: 16px
+    color: #ffffff
+    text-align: center;
+    bottom: -18px
+    left: 50%
+    margin-left: -22px
+    @media (max-width: $breakpoint-lg - 1)
+      left: 0
+      position: relative;
+      margin: 27px auto 37px
+    @media (max-width: $breakpoint-md - 1)
+      margin: 5px auto 31px
+    @media (max-width: $breakpoint-sm - 1)
+      margin-top: 9px
+
+    &:after
+      content: 'ШАГ'
+      position: absolute;
+      top: 100%
+      left: 0
+      width: 100%
+      margin-top: 10px
+      text-align: center;
+      color: #dfb47a
+      line-height: 1
+
+  &__decor
+    position: absolute;
+    border: 1px solid #e1e3e6
+    border-top: 0
+    border-left: 0
+    left: 10px
+    right: -31px
+    top: 19px
+    bottom: -30px
+    pointer-events none
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+      background: #e1e3e6
+
+    &:before
+      left: 0
+      bottom: 0
+      width: 1px
+      height: 19px
+
+    &:after
+      right: 0
+      top: 0
+      width: 237px
+      height: 1px
+
+.test1
+  &__container
+    padding: 37px 0px 62px
+    display: flex;
+    justify-content center
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
+      padding: 37px 83px 8px
+    @media (max-width: $breakpoint-sm - 1)
+      padding-left: 0
+      padding-right: 0
+
+  &__item
+    position: relative;
+    margin: 0 15px
+    width: 546px
+    height: 342px
+    cursor: pointer;
+    background-size: cover
+    background-position: 50% 50%
+    @media (max-width: $breakpoint-lg - 1)
+      width: 100%
+      margin: 0 0 51px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 47px
+    @media (max-width: $breakpoint-sm - 1)
+      height: 229px
+      margin-bottom: 60px
+
+    &:before
+      content: ''
+      position: absolute;
+      border: 2px solid #dfb47a
+      top: -4px
+      right: -4px
+      bottom: -4px
+      left: -4px
+      opacity: 0
+      anim()
+
+    &:hover
+      &:before
+        opacity: 1
+
+      .test1__title
+        border-color: #dfb47a;
+
+  &__title
+    height: 85px
+    background: url(../welcome/welcome-form-bg.jpg)
+    position: absolute;
+    left: 31px
+    right: 31px
+    bottom: -21px
+    display: flex;
+    align-items center
+    justify-content center
+    color: #ffffff
+    font-size: 24px
+    border-bottom: 5px solid transparent;
+    anim()
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 18px
+    @media (max-width: $breakpoint-sm - 1)
+      bottom: -14px
+      height: 57px
+      left: 27px
+      right: 27px
+
+.test2
+  &__items
+    display: flex;
+    justify-content center
+    padding: 57px 0 78px
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 40px 0 25px
+      flex-wrap wrap
+    @media (max-width: $breakpoint-md - 1)
+      padding: 49px 0 23px
+    @media (max-width: $breakpoint-sm - 1)
+      padding: 48px 0 8px
+
+  &__item
+    position: relative;
+    margin: 0 11px
+    width: 220px
+    height: 133px
+    flex-shrink 0
+    cursor: pointer;
+    background-position: 50% 50%
+    background-size: cover;
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 58px
+    @media (max-width: $breakpoint-sm - 1)
+      width: 100%
+      margin-bottom: 51px
+
+    &:before
+      content: ''
+      position: absolute;
+      left: -5px
+      top: -5px
+      right: -5px
+      bottom: -5px
+      border: 5px solid #deb379
+      opacity: 0
+      anim()
+      @media (max-width: $breakpoint-lg - 1)
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+
+    &:hover:before
+      opacity: 1
+
+    &--active:before
+      opacity: 1
+
+  &__title
+    position: absolute;
+    top: 100%
+    padding-top: 10px
+    left: 0
+    width: 100%
+    text-align: center;
+
+  &__checks
+    display: flex;
+    justify-content space-around
+    padding: 0 70px 93px
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 0 0 36px
+    @media (max-width: $breakpoint-md - 1)
+      flex-wrap wrap
+      padding: 0
+    @media (max-width: $breakpoint-sm - 1)
+      flex-direction column
+      align-items center
+
+  &__check
+    position: relative;
+    padding-left: 50px
+    cursor: pointer;
+    flex-shrink 0
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 37px
+    @media (max-width: $breakpoint-sm - 1)
+      width: 250px
+
+    &:before
+      content: ''
+      position: absolute;
+      background: url(../../images/sprite-stock-s.png)
+      left: 0
+      top: 0
+
+    input
+      display: none;
+
+    &:hover .test2
+      &__text
+        &:before
+          background: #ffffff
+
+  input:checked + &__text
+    &:before
+      background: #ffffff
+
+    &:after
+      opacity: 1
+
+  &__text
+    position: relative;
+    padding-left: 64px
+    line-height: 34px
+
+    &:before, &:after
+      content ''
+      position: absolute;
+      anim()
+
+    &:before
+      left: 0
+      top: 0
+      width: 34px
+      height: 34px
+      border: 2px solid #e1e3e6
+      background: #e1e3e6
+
+    &:after
+      background: url(../../images/sprite-checkbox-check.svg)
+      left: 10px;
+      top: 11px;
+      opacity: 0
+
+.test3
+  &__items
+    padding: 46px 0 148px
+    display: flex;
+    justify-content center
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
+      align-items center
+      padding: 36px 0 1px
+    @media (max-width: $breakpoint-md - 1)
+      padding: 44px 0 0
+    @media (max-width: $breakpoint-sm - 1)
+      padding-top: 45px
+
+  &__item
+    position: relative;
+    width: 357px
+    height: 201px
+    border: 10px solid #fff
+    margin: 0 12px
+    cursor: pointer;
+    anim()
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 91px
+    @media (max-width: $breakpoint-sm - 1)
+      height: 158px
+      margin-bottom: 71px
+
+    &:hover
+      border-color: #deb379
+
+  &__img
+    position: absolute;
+    top: 50%
+    left: 50%
+    transform translate(-50%, -50%)
+    @media (max-width: $breakpoint-sm - 1)
+      transform translate(-50%, -50%) scale(.7)
+
+  &__title
+    position: absolute;
+    left: 0
+    width: 100%
+    top: 100%
+    padding-top: 26px
+    text-align: center;
+    @media (max-width: $breakpoint-sm - 1)
+      padding-top: 19px
+
+.test4
+  &__items
+    display: flex;
+    justify-content center
+    padding: 50px 0 148px
+    flex-wrap wrap
+    @media (max-width: $breakpoint-lg - 1)
+      justify-content center
+      margin: 0 -30px
+      padding: 39px 0 0
+    @media (max-width: $breakpoint-md - 1)
+      padding: 48px 0
+    @media (max-width: $breakpoint-sm - 1)
+      flex-direction column
+      align-items center
+      padding-top: 51px
+
+  &__item
+    position: relative;
+    margin: 6px
+    flex-shrink 0
+    cursor: pointer;
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0 3px 96px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 40px
+
+    &:hover, &--active
+      & ^[0]__image
+        border-color: #deb379
+
+  &__image
+    border: 5px solid transparent
+    anim()
+    div
+      width: 227px
+      height: 201px
+      background-position: 50% 50%
+      background-size: cover
+      @media (max-width: $breakpoint-md - 1)
+        width: 213px
+        height: 188px
+
+  &__title
+    //position: absolute;
+    //top: 100%
+    padding-top: 10px
+    //left: 0
+    //width: 100%
+    text-align: center;
+    @media (max-width: $breakpoint-lg - 1)
+      padding-top: 27px
+    @media (max-width: $breakpoint-md - 1)
+      padding-top: 14px

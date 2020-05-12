@@ -1,0 +1,41 @@
+.radio
+  display: block;
+  margin-bottom: 7px
+  font-size: 16px
+
+  &:last-child
+    margin-bottom: 0
+
+  input
+    display: none;
+
+    &:checked ~ span:before
+      background: #009dd7
+
+  span
+    display: block;
+    position: relative;
+    padding-left: 28px
+    cursor: pointer;
+
+    &:before
+    &:after
+      content: ''
+      display: block;
+      position: absolute;
+      top: 50%
+      transform translateY(-50%)
+      border-radius: 50%
+      anim()
+
+    &:before
+      width: 6px
+      height: 6px
+      left: 7px
+      background: #d8dade
+
+    &:after
+      width: 20px
+      height: 20px
+      left: 0
+      border: 1px solid #d8dade

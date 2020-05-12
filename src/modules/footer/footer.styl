@@ -1,0 +1,133 @@
+.footer
+  margin-top: auto;
+  &__top
+    background-color: #333846
+    color: #ffffff
+    padding: 40px 0 26px
+
+  &__menu
+    display: flex;
+    position: relative
+    font-size: 16px
+
+    a
+      text-decoration: none;
+
+    ul
+      margin: 0
+
+      li
+        margin: 0
+        padding: 0
+
+        &:before
+          display: none
+
+      a
+        font-size: 14px
+        font-weight: 300
+        color: #fff
+        margin-bottom: 18px
+        //margin: 16px 0 10px
+        display: inline-block
+        anim()
+
+
+        &:before
+          content: ''
+          display: inline-block
+          vertical-align: middle;
+          width: 4px
+          height: 4px
+          background: #deb379
+          border-radius: 50%
+          margin-right: 8px
+          margin-left: -14px
+          @media (max-width: $breakpoint-md - 1)
+            display: none;
+
+        &:hover
+          color: #deb379
+          text-decoration: underline;
+
+    & > ul
+      flex: 1
+      display flex
+      flex-wrap wrap
+      align-items center
+      justify-content space-around
+      @media (max-width: $breakpoint-lg - 1)
+        justify-content space-between
+      @media (max-width: $breakpoint-md - 1)
+        flex-direction column
+        text-align: center;
+
+      > li
+        @media (max-width: $breakpoint-md - 1)
+          margin-bottom: 20px
+
+  &__contacts
+    flex-shrink 0
+    padding-top: 5px
+    line-height: 2
+    font-size: 14px
+    font-weight: 300
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+    p
+      margin-bottom: 0
+
+  &__link
+    display: block;
+    opacity .5
+    anim()
+
+    &:hover
+      opacity 1
+
+  &__bottom
+    background: #282d39
+    color: #ffffff
+    font-size: 16px
+    padding: 27px 0 28px
+
+    .c
+      display: flex;
+      align-items center
+      justify-content space-between
+      @media (max-width: $breakpoint-lg - 1)
+        flex-direction column
+        text-align: center;
+
+  &__left
+    flex-shrink 0
+    @media (max-width: $breakpoint-lg - 1)
+      width: auto;
+      margin-bottom: 20px
+
+  &__title
+    font-size: 11px
+
+  &__requisites
+    font-size: 14px
+    color: #828f9f
+
+  &__info
+    font-size: 14px
+    opacity: .33
+    max-width 475px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 20px
+
+  &__button
+    font-size: 16px
+    font-weight: 300
+    border-bottom: 1px dashed #fff
+    margin-top: 4px
+
+    &:before
+      display: none;
+
+    &:hover
+      border-bottom: 0

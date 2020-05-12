@@ -1,0 +1,28 @@
+.stock
+  .c
+    .stock__slider
+      .stock__items
+        each i in [1,2,3,4,5]
+          .stock__item
+            .stock__image(style='background-image: url(modules/stock/stock-image.jpg)')
+            .stock__content
+              .stock__title
+                | Дом из газобетона серии Фурла всего 5 500 000 руб
+                =i
+              .stock__bullets
+                .stock__bullet.stock__bullet--s
+                  .stock__label Площадь общая
+                  .stock__value 228 м2
+                .stock__bullet.stock__bullet--floors
+                  .stock__label Кол-во этажей
+                  .stock__value 2 этажа
+                .stock__bullet.stock__bullet--rooms
+                  .stock__label Кол-во комнат
+                  .stock__value 5 комнат
+              .stock__button: a(href='#').btn.btn--block ПОСМОТРЕТЬ ПРОЕКТ
+
+    button.stock__more: span Показать больше акций
+
+    .stock__pagination
+      button.arrow.arrow--left: svg: use(xlink:href="#icon-slider-arrow")
+      button.arrow.arrow--right: svg: use(xlink:href="#icon-slider-arrow")

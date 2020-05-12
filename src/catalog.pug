@@ -1,0 +1,16 @@
+extends pug/_layout
+include modules/header/header
+
+block body
+  +header(true, true)
+  include modules/catalog/catalog
+  include modules/individual/individual
+  include modules/included/included
+  include modules/team/team
+  include modules/reserve/reserve
+  include modules/examples/examples
+  include modules/choice/choice
+  include modules/calculate/calculate
+  include modules/items/items
+  include modules/places/places
+  include modules/footer/footer

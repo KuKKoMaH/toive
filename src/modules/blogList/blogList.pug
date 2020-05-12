@@ -1,0 +1,28 @@
+.blogList.lines
+  .c
+    .blogList__slider
+      .blogList__items
+        each i in [1,2,3,4]
+          .blogList__item
+            .blogList__card
+              .blogList__images
+                .blogList__image(style='background-image: url(modules/blogList/img/blogList-img1.jpg)')
+                .blogList__image(style='background-image: url(modules/blogList/img/blogList-img2.jpg)')
+              a.blogList__title(href='#') Как правильно выбрать дом для всесезонной жизни
+              .blogList__content
+                p Банк России выпустил в обращение памятную номиналом 100 рублей банкноту к Чемпионату мира по футболу FIFA 2018. Это первая рублевая банкнота, полностью выполненная.
+              .blogList__footer
+                .blogList__tags
+                  | Теги:
+                  a.blogList__tag(href='#') строительство,
+                  a.blogList__tag(href='#') теплый дом,
+                  a.blogList__tag(href='#') газобетон
+                a.blogList__link(href='#')
+                  svg: use(xlink:href="#icon-long-arrow")
+                  | Читать далее
+
+    button.blogList__more: span Показать больше записей
+
+    .blogList__pagination
+      button.arrow.arrow--left: svg: use(xlink:href="#icon-slider-arrow")
+      button.arrow.arrow--right: svg: use(xlink:href="#icon-slider-arrow")

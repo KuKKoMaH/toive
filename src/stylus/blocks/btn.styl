@@ -1,0 +1,113 @@
+.btn
+  position: relative;
+  display: inline-flex
+  align-items center
+  justify-content center
+  text-align: center;
+  padding: 0 40px
+  font-size: 16px
+  line-height: 1.5
+  min-height: 67px
+  cursor: pointer
+  color: #ffffff
+  transition all 0.1s ease-in !important
+  text-decoration: none;
+
+  &:after, &:before
+    content: ''
+    display: block;
+    position: absolute;
+    width: calc(100% - 7px)
+    height: 100%
+    border: 1px solid #dfb47a;
+    z-index: -1
+    anim()
+
+  &:before
+    top: 5px
+    left: 5px
+
+  &:after
+    top: 0
+    left: 0
+    background: #dfb47a
+
+  &:focus
+    outline 0
+
+  &:hover, &--active
+    text-decoration: none;
+    color: #000000
+
+    &:after
+      //background: transparent
+      background: #fff
+
+  &:active
+    color: #ffffff
+
+    &:after
+      background: #deb379
+      box-shadow inset 0 3px 7px rgba(#000, .13)
+
+  &--white
+    color: $black
+
+    &:before
+      background: #ffffff
+      box-shadow: 0 10px 31px rgba(#000, .15)
+
+  &--arrow
+    &:after
+      content: ''
+      margin-top: 3px
+      background: url(../../images/sprite-select_arrow.svg)
+      margin-left: 13px
+
+  &--arrowReverse
+    &:after
+      content: ''
+      margin-top: 3px
+      background: url(../../images/sprite-select_arrow.svg)
+      transform rotate(180deg)
+      margin-left: 13px
+
+  &--doc
+    flex-direction row-reverse
+
+    &:after
+      content: ''
+      background: url(../../images/sprite-pdf.svg)
+      margin-right: 12px
+
+  &--block
+    width: 100%
+    padding: 0 8px
+
+.arrow
+  width: 61px
+  height: 61px
+  border: 1px solid #dfb47a
+  background: #dfb47a
+  margin: 0 8px
+  cursor: pointer;
+  display: flex;
+  align-items center
+  justify-content center
+  anim()
+
+  &:hover
+    background-color: transparent;
+
+    svg
+      fill: #000
+
+  svg
+    width: 15px
+    height: 25px
+    fill #fff
+    anim()
+
+  &--right
+    svg
+      transform rotate(180deg)

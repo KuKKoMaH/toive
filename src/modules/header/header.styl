@@ -1,0 +1,416 @@
+.header
+  //position: fixed;
+  position: absolute;
+  top: 0
+  left: 0
+  z-index: 10
+  width: 100%
+  color: #ffffff
+  @media (max-width: $breakpoint-lg - 1)
+    position: fixed;
+
+  &:before
+    content: ''
+    display: block;
+    position: absolute;
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: -1
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAACqCAIAAADjrLLzAAAAeklEQVR4AWIwdAgBNEIuKBTEIAycyf3v7AMKjwZkd/k2o6bGgBECBI0zQcOf0T0QJZoME/Gw6udwKa/TO1GDxuLtD/esh9U/iV76yhAtZuvmXe83hM1rpvbv3JbefX2Yaaavez9m/XILdbkjEXsn7NqevbSW/1vmzfsHgBoJocGiYcAAAAAASUVORK5CYII=') repeat-x;
+    opacity: 0
+    //@media (max-width: $breakpoint-lg - 1)
+    transition opacity .1s ease-out
+    @media (max-width: $breakpoint-lg - 1)
+      anim()
+
+
+  &--withBg, &--fixed
+    &:before
+      position: absolute;
+      left: 0
+      top: 0
+      opacity: 1
+      @media (max-width: $breakpoint-lg - 1)
+        position: absolute
+        height: 100%
+        background-position: 0 0;
+
+  &--fixed:before
+    @media (min-width: $breakpoint-lg)
+      position: fixed;
+      background-position: 50% 100%;
+      height: 69px
+
+  &--withBg:before
+    @media (max-width: $breakpoint-lg - 1)
+      position: absolute;
+      height: 100%
+      background-position: 0 0;
+
+
+  &--fixed &
+    @media (min-width: $breakpoint-lg)
+      &__menu
+        position: fixed;
+        left: 0
+        top: 0
+        width: 100%
+
+  &__placeholder
+    height: 169px
+    @media (max-width: $breakpoint-lg - 1)
+      height: 120px
+
+  &__top
+    height: 101px
+    border-bottom: 1px solid #6e7987
+    @media (max-width: $breakpoint-lg - 1)
+      height: 60px
+
+    .c
+      display: flex;
+      align-items center
+      justify-content space-between
+      height: 100%
+
+  &__logo
+    background: url(../../images/sprite-logo.svg)
+    margin-right: 25px
+    @media (max-width: $breakpoint-lg - 1)
+      transform scale(.7)
+
+  &__left
+    display: flex;
+
+    &:hover
+      text-decoration: none;
+
+  &__text
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+  &__title
+    font-family: 'Playfair Display', serif;
+    font-size: 24px
+    font-weight: 400;
+    margin-bottom: 6px
+
+  &__subtitle
+    font-size: 12px
+    font-weight: 300
+
+  &__label
+    font-size: 14px
+    font-weight: 300
+    margin-bottom: 6px
+    @media (max-width: $breakpoint-lg - 1)
+      span
+        display: none;
+
+  &__value
+    font-size: 18px
+    font-weight: bold;
+
+  &__mail, &__phone
+    position: relative;
+
+    &:before
+      content: ''
+      display: block;
+      position: absolute;
+      top: 3px
+      right: 100%
+      margin-right: 6px
+
+  &__phone
+    &:before
+      background: url(../../images/sprite-phone.svg)
+    @media (max-width: $breakpoint-sm - 1)
+      display: none;
+
+  &__mail
+    &:before
+      background: url(../../images/sprite-mail.svg)
+    @media (max-width: $breakpoint-md - 1)
+      display: none;
+
+
+  &__button
+    display: none;
+    @media (max-width: $breakpoint-lg - 1)
+      width: 125px
+      border-left: 1px solid #6e7987
+      height: 100%
+      display: flex;
+      align-items center
+      justify-content center
+      font-size: 14px
+      cursor: pointer;
+
+      &:after
+        content: ''
+        display: block;
+        background: url(../../images/sprite-menu.png)
+        margin-left: 8px
+
+  &__menuTitle
+    position: relative;
+    background: #f7f7f7
+    font-family: 'Playfair Display', serif;
+    font-size: 24px
+    color: #24262e
+    height: 85px
+    align-items center
+    padding-left: 24px
+    display: none;
+
+    &:before
+      content: ''
+      display: block;
+      position: absolute;
+      left: 0
+      bottom: 0
+      width: 60px
+      height: 6px
+      background: #dfb47a
+
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex;
+
+  &--active &
+    &__menu
+      @media (max-width: $breakpoint-lg - 1)
+        opacity: 1
+        pointer-events all
+        transform none
+
+        *
+          pointer-events all
+
+  //&:before
+  //  opacity: .85
+  //  pointer-events all
+
+  &__menu
+    border-bottom: 1px solid #6e7987;
+    @media (max-width: $breakpoint-lg - 1)
+      position: fixed;
+      right: 0
+      top: 0
+      background: #ffffff
+      width: 300px
+      height: 100%
+      overflow: auto;
+      border: 0
+      opacity: 0
+      pointer-events none
+      transform translateX(20px)
+      anim()
+
+      &:before
+        content: ''
+        position: fixed;
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background: #333846
+        opacity: .85
+        anim()
+    //opacity: .85;
+
+    ul, li
+      margin: 0
+      padding: 0
+
+    & .c
+      @media (max-width: $breakpoint-lg - 1)
+        padding: 0
+
+    & .c > ul
+      height: 68px
+      display: flex;
+      align-items stretch
+      justify-content space-between
+      @media (max-width: $breakpoint-lg - 1)
+        flex-direction column
+        height: auto;
+
+      & > li
+        @media (max-width: $breakpoint-lg - 1)
+          color: #000000
+          background: #ffffff
+          //height: 63px
+          position: relative;
+
+          &:last-child
+            border-bottom: 0
+
+        &:before
+          display: none;
+
+        & > a, & > span
+          position: relative;
+          font-size: 12px
+          font-weight: 900
+          height: 100%
+          display: flex;
+          align-items center
+          justify-content center
+
+          &:hover
+            text-decoration: none;
+
+          @media (max-width: $breakpoint-lg - 1)
+            position: relative;
+            height: 63px
+            border-bottom: 1px solid #e8e9eb
+            padding-left: 90px
+            display: flex;
+            align-items center
+            justify-content flex-start
+            font-size: 18px
+            font-weight: 300
+            anim()
+
+            &:before
+              content: ''
+              display: block;
+              position: absolute;
+              top: 23px
+              left: 18px
+              width: 6px
+              height: 6px
+              background: #dfb47a
+              border-radius: 0
+              z-index: 1
+              anim()
+
+            &:hover
+              background: #dfb47a
+              color: #fff
+
+              &:before
+                background: #ffffff
+
+        &:hover
+          &:after
+            width: 60px
+            @media (max-width: $breakpoint-lg - 1)
+              display: none;
+
+        &:after
+          content: ''
+          position: absolute;
+          top: 100%
+          left: 0
+          height: 6px
+          width: 0
+          background: #deb379
+          anim()
+
+        &:hover
+          & > ul
+            opacity: 1
+            transform none
+            pointer-events all
+
+        & > ul
+          padding-top: 6px
+          left: 0
+          top: 100%
+          @media (max-width: $breakpoint-lg - 1)
+            padding-top: 0
+
+        & ul
+          opacity: 0
+          transform translateY(-10px)
+          pointer-events none
+          anim()
+          position: absolute;
+          width: 312px
+          @media (max-width: $breakpoint-lg - 1)
+            position: static;
+            opacity: 1
+            transform none
+            //pointer-events all
+            width: 100%
+
+          li
+            color: #000000
+            background: #ffffff
+            position: relative;
+
+            &:last-child
+              border-bottom: 0
+
+            & > ul
+              left: 100%
+              top: 0
+
+            &:before
+              top: 23px
+              left: 18px
+              width: 6px
+              height: 6px
+              background: #dfb47a
+              border-radius: 0
+              anim()
+
+            &:hover
+              &:before
+                background: #ffffff
+
+              & > ul
+                opacity: 1
+                transform none
+                pointer-events all
+
+          //& > ul
+          //  opacity: 0
+
+          a, span
+            height: 63px
+            border-bottom: 1px solid #e8e9eb
+            padding-left: 90px
+            display: flex;
+            align-items center
+            font-size: 18px
+            font-weight: 300
+            anim()
+
+            &:before, &:after
+              content: ''
+              display: block;
+              position: absolute;
+              top: 50%
+              left: 53px
+              margin-top: -30px
+              margin-left: -30px
+              //transform translate(-50%, -50%)
+              anim()
+
+            &:after
+              opacity: 0
+
+            &:hover
+              text-decoration: none;
+              background: #dfb47a
+              color: #ffffff
+
+              &:before
+                opacity: 0
+
+              &:after
+                opacity: 1
+
+icons = monolit kirpich gazobeton derevo karkas brus fahverk all
+for sprite in icons
+  .{sprite} a:before, .{sprite} span:before
+    background: url('./img/sprite-' + sprite + '.png')
+  .{sprite} a:after, .{sprite} span:after
+    background: url('./img/sprite-' + sprite + '-white.png')
+
+

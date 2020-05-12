@@ -1,0 +1,26 @@
+.facing.facing--grey.lines
+  .c
+    h2.facing__title Какие работы оказывает наша компания?
+    .facing__image(style='background-image: url(modules/facing/img/facing-fundament.jpg)')
+      .facing__imageTitle Разработка проекта фундамента
+    .facing__content
+      p Строительство любой конструкции начиняется с профессионального создания проектного решения. Услуга строительства фундамента «под ключ» подразумевает обязательную разработку плана проектировщиками. Потенциальным клиентам предлагаются готовые и индивидуальные решения.
+      h3 При выборе проекта необходимо учитывать несколько важных моментов:
+
+      ul
+        li: b конструктивные особенности будущего дома и материалы, который будут использоваться для его строительства;
+        li: b рельеф местности;
+        li: b вид грунта на участке, где будет происходить строительство;
+        li: b уровень залегания грунтовых вод;
+        li: b климатические особенности местности и т.д.
+
+    include ../gallery/gallery
+
+    .facing__form
+      img.facing__formImage.lazy(data-src='modules/facing/img/facing-form3.png' style='top: -25px; left: 269px;')
+      .facing__formContent
+        h3.facing__formTitle Для подробной консультации заполните #[br]форму ниже
+        .facing__formInputs
+          .input.input--phone.input--textBlack: input(placeholder='Ваш номер телефона:' type='tel')
+          .input.input--textBlack: input(placeholder='Площадь Вашего помещени:')
+          button.btn.btn--block УЗНАТЬ ПОДРОБНЕЕ

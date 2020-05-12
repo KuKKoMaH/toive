@@ -1,0 +1,179 @@
+.popup
+  max-width: 644px
+  position: relative
+  margin: 0 auto
+  background: #ffffff
+  z-index: 1
+  padding: 58px 20px 88px
+
+  &:before
+    content ''
+    position: absolute;
+    border: 6px solid #fff
+    left: -10px
+    top: -10px
+    right: -10px
+    bottom: -10px
+    pointer-events none
+
+  .mfp-close
+    width: 47px
+    height: 47px
+    color: #fff
+    border: 1px solid #dfb47a
+    background: #dfb47a
+    padding: 0
+    right: 0
+    top: 0
+    opacity: 1
+    anim()
+    font-size: 0
+
+    &:before, &:after
+      content ''
+      position: absolute;
+      width: 24px
+      height: 1px
+      left: 50%
+      top: 50%
+      background: #ffffff
+      margin-left: -12px
+      anim()
+
+    &:before
+      transform rotate(-45deg)
+
+    &:after
+      transform rotate(45deg)
+
+    &:hover
+      background: #fff
+
+      &:before, &:after
+        background: #000000
+
+  h2
+    font-size: 30px
+    line-height: 1.35
+    text-align: center;
+    margin-bottom: 47px
+    @media (max-width: $breakpoint-lg - 1)
+      font-size: 24px
+      br
+        display: none;
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 18px
+
+  h3
+    font-size: 24px
+    line-height: 1.35
+    text-align: center;
+    margin-bottom: 47px
+    @media (max-width: $breakpoint-lg - 1)
+      font-size: 20px
+      br
+        display: none;
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 18px
+
+  &__form
+    max-width 470px
+    margin: 0 auto
+
+    > *:last-child
+      margin-bottom: 0
+
+  &__row
+    display: flex;
+    margin: 0 -12px 43px
+    position: relative;
+    //z-index: 1
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction column
+      margin: 0 0 20px
+
+    > *
+      margin: 0 12px
+      flex: 1
+      @media (max-width: $breakpoint-md - 1)
+        margin: 0 0 24px
+
+    &--buttons
+      max-width 760px
+      margin: 0 auto 48px
+      @media (max-width: $breakpoint-md - 1)
+        margin-bottom: 0px
+
+    &--checkbox
+      justify-content center
+      margin-left: -26px
+      margin-right: -26px
+      @media (max-width: $breakpoint-md - 1)
+        margin-left: 0
+        margin-right: 0
+
+      > *
+        flex 0 0 auto
+        margin: 0 26px
+        @media (max-width: $breakpoint-md - 1)
+          margin: 0 0 26px
+
+  &__time
+    margin-bottom: 43px
+    overflow: hidden;
+    height: 0
+    anim(.2s)
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 38px
+
+    &--active
+      height: 67px
+
+    .input
+      max-width 470px
+      margin: 0 auto
+
+  &__submit
+    text-align: center;
+
+    .btn
+      padding-left: 112px
+      padding-right: 112px
+      @media (max-width: $breakpoint-md - 1)
+        padding-left: 12px
+        padding-right: 12px
+        width: 100%
+
+
+  &--lg
+    max-width: 1056px
+    padding: 58px 20px 69px
+
+    .popup
+      &__form
+        max-width 965px
+
+  &--thank
+    max-width: 1056px
+    padding: 28px 20px 28px
+
+    h2
+      margin-bottom: 0
+
+      &:before, &:after
+        content: ''
+        position: absolute;
+
+      &:before
+        width: 86px;
+        height: 86px;
+        background: #dfb47a;
+        top: -71px;
+        left: 50%;
+        margin-left: -43px;
+
+      &:after
+        background: url(../../images/sprite-check.svg)
+        top: -43px;
+        left: 50%;
+        margin-left: -15px;

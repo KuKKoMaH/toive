@@ -1,0 +1,180 @@
+.blog
+  position: relative;
+  padding: 41px 0 32px
+  background-color: #f7f8fa
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 22px 0 10px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 23px 0 8px
+  @media (max-width: $breakpoint-sm - 1)
+    padding: 19px 0 8px
+
+  &:after
+    content: ''
+    position: absolute;
+    background: url(../../images/sprite-toive.png)
+    right: 50%
+    margin-right: 741px
+    top: 44%
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+  &__img
+    height: 552px
+    background-position: 50% 50%
+    background-size: cover;
+    position: relative;
+    @media (max-width: $breakpoint-lg - 1)
+      height: 421px
+    @media (max-width: $breakpoint-md - 1)
+      margin: 0 10px
+      height: 283px
+    @media (max-width: $breakpoint-sm - 1)
+      margin: 0
+      height: 200px
+
+  &__header
+    background: #ffffff
+    width: 1060px
+    margin: -217px auto 40px
+    position: relative;
+    padding: 62px 41px 49px
+    @media (max-width: $breakpoint-lg - 1)
+      width: 600px
+      margin-top: -125px
+      margin-bottom: 28px
+      padding: 0
+      background-color: transparent;
+    @media (max-width: $breakpoint-md - 1)
+      width: auto;
+      margin: -64px 16px 29px
+    @media (max-width: $breakpoint-sm - 1)
+      position: static;
+      margin: 0 0 26px
+
+  &__title
+    margin-bottom: 44px
+    padding-right: 100px
+    @media (max-width: $breakpoint-lg - 1)
+      background: #ffffff
+      position: relative;
+      padding: 59px 20px 62px 31px
+      margin-bottom: 36px
+    @media (max-width: $breakpoint-md - 1)
+      padding: 29px 20px 29px 21px
+      margin-bottom: 37px
+    @media (max-width: $breakpoint-sm - 1)
+      margin: 0
+      background-color: transparent;
+      padding: 42px 0px 29px;
+
+    h1
+      font-size: 36px
+      font-weight: 300
+      font-family: 'Roboto', sans-serif;
+      @media (max-width: $breakpoint-md - 1)
+        font-size: 30px
+      @media (max-width: $breakpoint-md - 1)
+        font-size: 24px
+        font-weight: 700
+
+
+  &__text
+    font-size: 16px
+    font-weight: 500
+    line-height: 1.875
+    @media (max-width: $breakpoint-lg - 1)
+      margin-left: 32px
+    @media (max-width: $breakpoint-md - 1)
+      margin-left: 22px
+    @media (max-width: $breakpoint-sm - 1)
+      margin-left: 0
+
+  &__date
+    position: absolute;
+    font-size: 14px
+    font-weight: 300
+    top: 96px
+    right: 39px
+    @media (max-width: $breakpoint-lg - 1)
+      top: auto;
+      bottom: 27px
+      right: 30px
+    @media (max-width: $breakpoint-md - 1)
+      bottom: 12px
+    @media (max-width: $breakpoint-sm - 1)
+      color: #ffffff
+      bottom: auto;
+      top: -35px;
+      right: 21px;
+
+  &__content
+    max-width 977px
+    margin: 0 auto
+    font-size: 14px
+    font-weight: 300
+    line-height: 2.15
+    @media (max-width: $breakpoint-lg - 1)
+      max-width 600px
+      padding-left: 32px
+    @media (max-width: $breakpoint-md - 1)
+      max-width none
+      margin: 0 16px
+      padding-left: 24px
+    @media (max-width: $breakpoint-sm - 1)
+      padding-left: 0
+      margin: 0
+
+    p
+      margin-bottom: 2.1em
+
+    img
+      max-width 100%
+      height: auto;
+
+  &__tags
+    font-size: 16px
+    font-weight: bold;
+    margin-bottom: 36px
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+  &__tag
+    font-weight: 300
+    margin-left: 12px
+    display: inline-block;
+    anim()
+
+    &:hover
+      text-decoration: none;
+      color: #dfb47a
+
+  &__gallery
+    display: flex;
+    flex-wrap wrap
+    margin: 0 -6px
+    justify-content center
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+  &__galleryImage
+    width: 25%
+    padding: 6px
+
+    > *
+      display: block;
+      height: 170px
+      background-size: cover
+      background-position: 50% 50%
+
+  &__back
+    position: absolute;
+    left: 0
+    top: 0
+    background: #5c6779
+    color: #ffffff
+    font-family: 'Playfair Display', serif;
+    font-size: 16px
+    padding: 13px 31px 14px
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;

@@ -1,0 +1,133 @@
+.catalog.lines
+  .c
+    .catalog__block: .catalog__inner: .catalog__content
+      .catalog__row
+        .catalog__image(style='background-image: url(modules/catalog/img/catalog-img.jpg)')
+        .catalog__info
+          h1.catalog__title Дома из дерева от компании Toive
+          .catalog__text
+            p Василий обратился в компанию «АРСЕНАЛ» 24.05.2012. Он хотел построить дом для круглогодичного проживания с семьей из 4 человек. У него был участок в г. Гатчина. Он пришел к нам в компанию со своим проектом, где хотел внести правки. Мы учли его пожелания и через 7 дней был.
+            p Василий обратился в компанию «АРСЕНАЛ» 24.05.2012. Он хотел построить дом для круглогодичного проживания с семьей из 4 человек. У него был участок в г. Гатчина. Он пришел к нам в компанию со своим проектом, где хотел внести правки. Мы учли его пожелания и через 7 дней был. Василий обратился в компанию «АРСЕНАЛ» 24.05.2012. Он хотел построить дом для круглогодичного проживания с семьей из 4 человек.
+
+      h2.catalog__advantagesTitle Основные преимущества домов из дерева
+      .catalog__advantagesSlider
+        .catalog__advantages
+          //.catalog__advantage Быстрота постройки
+          //.catalog__advantage При постройки не требует#[br]затрат
+          //.catalog__advantage Экологичность
+          //.catalog__advantage Самобытность
+          .catalog__advantage Отсутствие неравномерной#[br]осадки
+          .catalog__advantage Прочность и надежность
+          .catalog__advantage Возможности перепланировки
+          .catalog__advantage Долговечность до 100 лет
+          .catalog__advantage Увеличина площадь
+      .catalog__advantagesPagination
+        button.arrow.arrow--left: svg: use(xlink:href="#icon-slider-arrow")
+        button.arrow.arrow--right: svg: use(xlink:href="#icon-slider-arrow")
+
+    .catalog__block.catalog__block--submenu.catalog__block
+      .catalog__inner
+        .catalogSubmenu
+          .catalogSubmenu__slider
+            .catalogSubmenu__items
+              .catalogSubmenu__item
+                a.catalogSubmenu__block(href='#'): .catalogSubmenu__inner
+                  img.catalogSubmenu__img(src='modules/catalog/img/karkas.png')
+                  .catalogSubmenu__title Каркасные дома
+              .catalogSubmenu__item.catalogSubmenu__item--active
+                a.catalogSubmenu__block(href='#'): .catalogSubmenu__inner
+                  img.catalogSubmenu__img(src='modules/catalog/img/brus.png')
+                  .catalogSubmenu__title Дома из бруса
+              .catalogSubmenu__item
+                a.catalogSubmenu__block(href='#'): .catalogSubmenu__inner
+                  img.catalogSubmenu__img(src='modules/catalog/img/fahverk.png')
+                  .catalogSubmenu__title Фахверковые дома
+          .catalogSubmenu__pagination
+            button.arrow.arrow--left: svg: use(xlink:href="#icon-slider-arrow")
+            button.arrow.arrow--right: svg: use(xlink:href="#icon-slider-arrow")
+
+      .catalogAdvantages
+        h3.catalogAdvantages__title Основные преимущества домов из дерева
+        .catalogAdvantages__items
+          .catalogAdvantages__item
+            .catalogAdvantages__img(style='background-image: url(modules/catalog/img/catalogAdvantages-1.png)')
+            .catalogAdvantages__header Быстрота постройки
+          .catalogAdvantages__item
+            .catalogAdvantages__img(style='background-image: url(modules/catalog/img/catalogAdvantages-2.png)')
+            .catalogAdvantages__header При постройки не требует затрат для#[br]его внутренней и внешний отделки
+          .catalogAdvantages__item
+            .catalogAdvantages__img(style='background-image: url(modules/catalog/img/catalogAdvantages-3.png)')
+            .catalogAdvantages__header Экологично чистый 100% природный#[br]материал
+          .catalogAdvantages__item
+            .catalogAdvantages__img(style='background-image: url(modules/catalog/img/catalogAdvantages-4.png)')
+            .catalogAdvantages__header Самобытность
+          .catalogAdvantages__item
+            .catalogAdvantages__img(style='background-image: url(modules/catalog/img/catalogAdvantages-5.png)')
+            .catalogAdvantages__header Экологически благоприятная#[br]среда обитания
+
+    h2.catalog__offersTitle Мы предлагаем Вам более 2 384 готовых проектов домов
+    .catalog__headers
+      .catalog__header.catalog__header--active: .btn.btn--block ДОМА ДО 150 М#[sup 2]
+      .catalog__header: .btn.btn--block ДОМА ОТ 150 М#[SUP 2] ДО 400 М#[SUP 2]
+      .catalog__header: .btn.btn--block ДОМА ОТ 400 М#[SUP 2]
+    .catalog__tabs
+      .catalog__tab.catalog__tab--active
+        .items__container
+          .items__slider
+            .items__items
+              each i in [1,2,3,4,5]
+                .items__item
+                  a.items__inner(href='#')
+                    .items__img(style='background-image: url(modules/items/items-img.jpg)')
+                    h2.items__header Дом серии Hurry1
+                    .items__info
+                      .items__value
+                        svg: use(xlink:href="#icon-s")
+                        | 300 М#[sup 2]
+                      .items__value
+                        svg: use(xlink:href="#icon-rouble")
+                        | 5,7 МЛН РУБ
+          .items__pagination
+            button.arrow.arrow--left: svg: use(xlink:href="#icon-slider-arrow")
+            button.arrow.arrow--right: svg: use(xlink:href="#icon-slider-arrow")
+
+      .catalog__tab
+        .items__container
+          .items__slider
+            .items__items
+              each i in [1,2,3,4,5]
+                .items__item
+                  a.items__inner(href='#')
+                    .items__img(style='background-image: url(modules/items/items-img.jpg)')
+                    h2.items__header Дом серии Hurry1- #{i}
+                    .items__info
+                      .items__value
+                        svg: use(xlink:href="#icon-s")
+                        | 300 М#[sup 2]
+                      .items__value
+                        svg: use(xlink:href="#icon-rouble")
+                        | 5,7 МЛН РУБ
+          .items__pagination
+            button.arrow.arrow--left: svg: use(xlink:href="#icon-slider-arrow")
+            button.arrow.arrow--right: svg: use(xlink:href="#icon-slider-arrow")
+
+      .catalog__tab
+        .items__container
+          .items__slider
+            .items__items
+              each i in [1,2,3,4,5]
+                .items__item
+                  a.items__inner(href='#')
+                    .items__img(style='background-image: url(modules/items/items-img.jpg)')
+                    h2.items__header Дом серии Hurry1
+                    .items__info
+                      .items__value
+                        svg: use(xlink:href="#icon-s")
+                        | 300 М#[sup 2]
+                      .items__value
+                        svg: use(xlink:href="#icon-rouble")
+                        | 5,7 МЛН РУБ
+          .items__pagination
+            button.arrow.arrow--left: svg: use(xlink:href="#icon-slider-arrow")
+            button.arrow.arrow--right: svg: use(xlink:href="#icon-slider-arrow")
+

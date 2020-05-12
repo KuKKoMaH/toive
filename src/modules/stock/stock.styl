@@ -1,0 +1,229 @@
+.stock
+  padding: 123px 0 125px
+  background-color: #f7f8fa
+  position: relative;
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 31px 0 51px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 36px 0 35px
+  @media (max-width: $breakpoint-sm - 1)
+    padding: 23px 0 44px
+
+  &:before
+    content: ''
+    position: absolute;
+    background: url(../../images/sprite-toive.png)
+    top: 50%
+    right: 50%
+    margin-right: 740px
+    transform translateY(-50%)
+
+  &--active &
+    &__item
+      &:nth-child(n+4)
+        display: flex
+
+    &__more
+      display: none;
+
+  &__slider
+    @media (max-width: $breakpoint-lg - 1)
+      overflow: hidden;
+
+  &__items
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex;
+
+  &__item
+    background: #ffffff
+    margin-bottom: 78px
+    display: flex;
+    align-items stretch
+    padding: 19px 51px 0
+    flex-shrink 0
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
+      padding: 22px 20px
+      margin-bottom: 65px
+    @media (max-width: $breakpoint-md - 1)
+      padding: 6px
+      margin-bottom: 33px
+    @media (max-width: $breakpoint-sm - 1)
+      margin-bottom: 41px
+
+    &:nth-child(2n)
+      flex-direction row-reverse
+      @media (max-width: $breakpoint-lg - 1)
+        flex-direction column
+
+      .stock
+        &__button
+          right: 51px
+          @media (max-width: $breakpoint-lg - 1)
+            right: auto;
+
+    &:nth-child(n+4)
+      display: none;
+      @media (max-width: $breakpoint-lg - 1)
+        display: flex;
+
+  &__image
+    margin-bottom: -38px
+    width: 387px
+    height: 314px
+    flex-shrink 0
+    background-position: 50% 50%;
+    background-size: cover;
+    @media (max-width: $breakpoint-lg - 1)
+      width: 100%
+      margin-bottom: 0px
+    @media (max-width: $breakpoint-md - 1)
+      height: 214px
+    @media (max-width: $breakpoint-sm - 1)
+      height: 185px
+
+  &__content
+    padding-left: 57px
+    flex: 1
+    position: relative;
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 0 5px
+
+  &__title
+    font-size: 30px
+    padding-top: 22px
+    margin-bottom: 44px
+    max-width 540px
+    font-weight: 300
+    @media (max-width: $breakpoint-lg - 1)
+      padding-top: 28px
+      margin-bottom: 39px
+    @media (max-width: $breakpoint-md - 1)
+      padding-top: 25px
+      margin-bottom: 40px
+      max-width none
+      font-size: 24px
+      line-height: 1.4
+      text-align: center;
+    @media (max-width: $breakpoint-sm - 1)
+      padding-top: 18px
+      line-height: 1.5
+      margin-bottom: 25px
+
+  &__bullets
+    display: flex;
+    margin-bottom: 20px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 89px
+    @media (max-width: $breakpoint-md - 1)
+      flex-wrap wrap
+      justify-content center
+      margin: 0 -30px 9px;
+    @media (max-width: $breakpoint-sm - 1)
+      margin-bottom: 19px
+
+  &__bullet
+    position: relative;
+    width: 33.3333%
+    padding-left: 45px
+    font-weight: 300
+    @media (max-width: $breakpoint-md - 1)
+      width: auto;
+      margin: 0 30px 26px
+    @media (max-width: $breakpoint-sm - 1)
+      margin: 0 10px 18px
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+
+    &:after
+      width: 1px
+      height: 100%
+      background: #c4c4c4
+      right: 42px
+      top: -6px
+      @media (max-width: $breakpoint-lg - 1)
+        right: 22px
+      @media (max-width: $breakpoint-md - 1)
+        display: none;
+
+    &:before
+      left: 0
+      top: -4px
+
+    icons = "s" floors rooms
+    for sprite in icons
+      &--{sprite}:before
+        background: url('../../images/sprite-stock-' + sprite + '.png')
+
+    &:last-child
+      &:after
+        display: none;
+
+  &__label
+    font-size: 16px
+    margin-bottom: 4px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 6px
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 11px
+      margin-bottom: 5px
+
+  &__value
+    font-size: 36px
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 25px
+
+  &__button
+    position: absolute;
+    bottom: -33px
+    z-index: 1
+    width: 350px
+    @media (max-width: $breakpoint-lg - 1)
+      left: 50%
+      margin-left: -175px
+      bottom: -44px
+    @media (max-width: $breakpoint-md - 1)
+      position: relative
+      bottom: 0
+      margin-bottom: 51px
+    @media (max-width: $breakpoint-sm - 1)
+      margin-bottom: 43px
+
+  &__more
+    background: #fff
+    width: 100%
+    font-size: 20px
+    font-weight: 300
+    anim()
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+    span
+      display: inline-block
+      position: relative;
+      padding: 23px 0
+
+      &:after
+        content ''
+        position: absolute;
+        width: 100%
+        height: 3px
+        background: #dfb47a
+        left: 0
+        top: 100%
+        anim()
+
+    &:hover
+      background: #dfb47a
+      color: #ffffff
+
+      span:after
+        background: #212638
+
+  &__pagination
+    display: none;
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex;
+      justify-content center

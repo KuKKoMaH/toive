@@ -1,0 +1,13 @@
+extends pug/_layout
+include modules/header/header
+include modules/hero/hero
+
+block body
+  +header(false)
+  +hero('modules/hero/img/hero-bg-stock.jpg', 'Акции на дома от компании<br/>Toive до 30.08.19')
+  include modules/stock/stock
+  include modules/reserve/reserve
+  include modules/choice/choice
+  include modules/calculate/calculate
+  include modules/places/places
+  include modules/footer/footer

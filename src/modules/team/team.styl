@@ -1,0 +1,103 @@
+.team
+  background-color: #f7f8fa
+  padding: 93px 0 114px
+  position: relative;
+  @media (max-width: $breakpoint-lg - 1)
+    text-align: center;
+    padding: 60px 0 77px
+    background-position: 100% 100%;
+  @media (max-width: $breakpoint-md - 1)
+    padding-bottom: 60px
+    background-position: 100% 20%;
+  @media (max-width: $breakpoint-md - 1)
+    padding: 50px 0 50px
+
+  &--front
+    &:before
+      content: ''
+      position: absolute;
+      background: url(./img/team-bg.jpg) 100% 50% no-repeat
+      width: 659px
+      height: 401px
+      left: 50%
+      margin-left: 325px
+      top: 160px
+
+  &__title
+    font-size: 40px
+    color: #191f27
+    margin-bottom: 35px
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 36px
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 24px
+
+  &__subtitle
+    color: #191f27
+    font-weight: 500
+    max-width 750px
+    margin-bottom: 65px
+    line-height: 1.65
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 60px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 40px
+
+  &__slider
+    overflow: hidden
+    margin: -28px
+    padding: 28px
+
+  &__items
+    display: flex;
+
+  &__item
+    flex-shrink 0
+
+  &__itemInner
+    margin: 0 auto
+    max-width 298px
+    position: relative;
+    border: 5px solid #fff
+    padding: 5px 5px 30px
+    text-align: center;
+    anim()
+
+    &:after
+      content: ''
+      position: absolute;
+      width: 16px
+      height: 16px
+      background: #dfb37a
+      right: 31px
+      bottom: -8px
+
+    &:hover
+      background: #ffffff
+      box-shadow -5px 8px 29px rgba(0, 0, 0, 0.1)
+
+  &__image
+    max-width 278px
+    height: 211px
+    margin: 0 auto 30px
+
+  &__head
+    font-weight: bold;
+    margin-bottom: 10px
+
+  &__text
+    font-size: 16px
+    line-height: 1.5
+    font-weight: 300
+
+  &__pagination
+    position: absolute;
+    right: 50%
+    margin-right: -648px
+    top: 138px
+    display: flex;
+    @media (max-width: $breakpoint-lg - 1)
+      position: static;
+      width: 100%
+      justify-content center
+      margin-top: 53px

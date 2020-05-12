@@ -1,0 +1,193 @@
+.networks
+  padding: 76px 0 36px
+  position: relative;
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 52px 0 0px
+  @media (max-width: $breakpoint-sm - 1)
+    padding-top: 45px
+
+  &:after
+    content ''
+    position: absolute;
+    background: url(../../images/sprite-toive.png)
+    right: 50%;
+    margin-right: 740px;
+    top: 759px;
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+  &__title
+    text-align: center;
+    font-size: 40px
+    margin-bottom: 79px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 38px
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 24px
+      line-height: 1.5
+      margin-bottom: 43px
+
+  &__item
+    & .c
+      display: flex;
+      padding-bottom: 68px
+      position: relative;
+      z-index: 1
+
+    &:nth-child(2n)
+      .c
+        flex-direction row-reverse
+        @media (max-width: $breakpoint-lg - 1)
+          flex-direction column
+
+      .networks
+        &__img
+          margin-right: 0
+          margin-left: 40px
+          @media (max-width: $breakpoint-lg - 1)
+            margin-left: auto;
+            margin-right: auto;
+          @media (max-width: $breakpoint-md - 1)
+            margin-left: -10px;
+            margin-right: -10px;
+
+    @media (max-width: $breakpoint-lg - 1)
+      background-color: #f7f8fa
+      & .c
+        flex-direction column
+
+      &:first-child
+        background: #ffffff
+
+        .c
+          padding-bottom: 60px
+
+      &:nth-child(2)
+        padding-top: 65px
+        @media (max-width: $breakpoint-md - 1)
+          padding-top: 0
+
+      &:last-child
+        .c
+          padding-bottom: 0
+    @media (max-width: $breakpoint-md - 1)
+      &:last-child
+        .c
+          padding-bottom: 12px
+    @media (max-width: $breakpoint-md - 1)
+      &:last-child
+        .c
+          padding-bottom: 26px
+
+  &__img
+    width: 625px
+    height: 400px
+    flex-shrink 0
+    margin-right: 40px
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    box-shadow -5px 25px 29px rgba(#000, .1)
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0 auto 66px
+    @media (max-width: $breakpoint-md - 1)
+      width: auto;
+      margin: 0 -10px 72px
+    @media (max-width: $breakpoint-sm - 1)
+      margin-bottom: 61px
+
+    &:after
+      content: ''
+      position: absolute;
+      border: 10px solid #fff
+      left: 20px
+      top: 20px
+      right: 20px
+      bottom: 20px
+      @media (max-width: $breakpoint-md - 1)
+        border-left: 0
+        border-right: 0
+        left: 0
+        right: 0
+
+  &__imgLabel
+    font-family: 'Playfair Display', serif;
+    background: url(../welcome/welcome-form-bg.jpg)
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    width: 337px;
+    height: 57px;
+    left: 50%;
+    bottom: 0;
+    margin-bottom: -13px;
+    margin-left: -175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    @media (max-width: $breakpoint-md - 1)
+      left: 20px
+      right: 20px
+      width: auto;
+      margin-left: 0
+    @media (max-width: $breakpoint-sm - 1)
+      left: 0
+      right: 0
+      font-size: 24px
+
+  &__header
+    font-size: 36px
+    margin: -13px 0 30px
+    @media (max-width: $breakpoint-md - 1)
+      text-align: center;
+      font-size: 30px
+      margin-bottom: 33px
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 24px
+
+  &__content
+    @media (max-width: $breakpoint-lg - 1)
+      max-width: 625px
+      margin: 0 auto
+
+    ul
+      li
+        padding-left: 0
+        font-size: 16px
+        line-height 1.9
+        margin-bottom: 10px
+        @media (max-width: $breakpoint-md - 1)
+          line-height: 1.6
+        @media (max-width: $breakpoint-sm - 1)
+          margin-bottom: 15px
+
+        &:before
+          background: #191f27
+          height: 1px
+          width: 56px
+          top: 100%
+          margin-top: 5px
+          left: 1px
+
+        &:last-child:before
+          display: none;
+
+  &__button
+    margin-top: -1px
+    @media (max-width: $breakpoint-lg - 1)
+      text-align: right;
+    @media (max-width: $breakpoint-md - 1)
+      text-align: center;
+      margin-top: 44px
+
+    .btn
+      padding-left: 97px
+      padding-right: 97px
+      @media (max-width: $breakpoint-sm - 1)
+        padding-left: 0
+        padding-right: 0
+        width: 100%
+
+

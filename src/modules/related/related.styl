@@ -1,0 +1,111 @@
+.related
+  background-color: #f7f8fa
+  padding: 25px 0 128px
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 25px 0 49px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 25px 0 44px
+  @media (max-width: $breakpoint-sm - 1)
+    padding: 37px 0 46px
+
+  &__title
+    font-size: 30px
+    font-weight: 700
+    margin-bottom: 52px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 37px
+    @media (max-width: $breakpoint-md - 1)
+      text-align: center;
+      margin-bottom: 35px
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 25px
+      margin-bottom: 28px
+
+  &__slider
+    @media (max-width: $breakpoint-lg - 1)
+      overflow: hidden;
+
+  &__items
+    display: flex;
+    margin: 0 -14px
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0
+
+  &__item
+    flex-shrink 0
+    width: 33.333%
+    padding: 0 14px
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 0
+
+  &__card
+    background: #ffffff
+    padding: 14px 15px 43px
+    @media (max-width: $breakpoint-sm - 1)
+      padding-bottom: 31px
+
+  &__img
+    height: 227px
+    background-position: 50% 50%
+    background-size: cover
+    margin-bottom: 32px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-left: 8px
+      margin-right: 8px
+    @media (max-width: $breakpoint-md - 1)
+      margin-left: 0
+      margin-right: 0
+      margin-bottom: 26px
+
+  &__header
+    font-size: 24px
+    line-height: 1.25
+    font-weight: 500
+    padding-left: 37px
+    padding-right: 10px
+    display: block;
+    @media (max-width: $breakpoint-lg - 1)
+      padding-left: 23px
+    @media (max-width: $breakpoint-md - 1)
+      padding-left: 36px
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 18px
+      line-height: 1.75
+
+  &__footer
+    text-align: right;
+    margin-top: 29px
+    padding-right: 39px
+
+  &__link
+    font-size: 16px
+    font-weight: 300
+    color: #dfb47a
+    flex-shrink 0
+    margin-left: auto;
+    anim()
+    @media (max-width: $breakpoint-md - 1)
+      margin-left: 0
+      margin-top: 21px
+    @media (max-width: $breakpoint-sm - 1)
+      margin-top: 17px
+
+    svg
+      width: 20px
+      height: 7px
+      fill: #dfb47a
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 20px
+      anim()
+
+  &__pagination
+    display: none;
+    @media (max-width: $breakpoint-lg - 1)
+      margin-top: 47px
+      display: flex;
+      justify-content center
+    @media (max-width: $breakpoint-md - 1)
+      margin-top: 39px
+    @media (max-width: $breakpoint-sm - 1)
+      margin-top: 14px

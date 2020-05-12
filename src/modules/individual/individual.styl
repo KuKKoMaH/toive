@@ -1,0 +1,63 @@
+//@media (max-width: $breakpoint-lg - 1)
+.individual
+  background: url(./individual-bg.jpg) no-repeat 50% 50%
+  background-size: cover;
+  padding: 62px 0 71px
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 53px 0 88px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 38px 0 19px
+  @media (max-width: $breakpoint-sm - 1)
+    padding: 30px 0 20px
+
+  .c
+    position: relative;
+    display: flex;
+    justify-content flex-end
+    @media (max-width: $breakpoint-md - 1)
+      display: block;
+
+  &__img
+    position: absolute;
+    width: 810px;
+    height: 466px;
+    right: 100%
+    margin-right: -745px
+    margin-top: 19px
+    top: 50%
+    transform translateY(-50%)
+    @media (max-width: $breakpoint-lg - 1)
+      margin-right: -312px
+      margin-top: 14px
+      transform scaleX(-1) translateY(-50%)
+    @media (max-width: $breakpoint-md - 1)
+      display: none;
+
+  &__content
+    position: relative;
+    z-index: 1
+    max-width 410px
+    height: 433px
+    display: flex
+    flex-direction column
+    justify-content space-between
+    @media (max-width: $breakpoint-md - 1)
+      text-align: center;
+      margin: 0 auto
+      display: block;
+      height: auto;
+
+  &__block
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 41px
+    @media (max-width: $breakpoint-sm - 1)
+      margin-bottom: 30px
+
+  &__text
+    font-family: 'Playfair Display', serif;
+    color: #ffffff
+    line-height: 2
+    margin-bottom: 26px
+    @media (max-width: $breakpoint-sm - 1)
+      line-height: 1.5
+

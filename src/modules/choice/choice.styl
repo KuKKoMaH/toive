@@ -1,0 +1,152 @@
+.choice
+  position: relative;
+  padding: 112px 0 89px
+  background: url(./choice-bg.jpg) 50% 50% no-repeat
+  background-size: cover
+  overflow: hidden;
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 75px 0 90px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 60px 0
+  @media (max-width: $breakpoint-sm - 1)
+    padding: 50px 0 70px
+  //&:before
+  //  content: ''
+  //  position: absolute;
+  //  background: url(../examples/examples-bg.jpg)
+  //  width: 882px
+  //  height: 724px
+  //  bottom: -50px
+  //  left: 50px
+
+  &:after
+    content: ''
+    position: absolute;
+    width: 858px
+    height: 724px
+    background: url(./choise-house.png) 50% 50% no-repeat;
+    left: 50%
+    bottom: 0
+    margin-left: 102px
+    margin-bottom: -98px
+    pointer-events none
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+      background: none;
+
+  &--texture
+    background: url(./choice-bg-texture.jpg) 50% 0 no-repeat
+    color: #ffffff
+    @media (min-width: $breakpoint-lg)
+      padding-top: 0
+    @media (max-width: $breakpoint-lg - 1)
+      background: url(./choice-bg-texture-sm.jpg) 50% 50% no-repeat
+      background-size: cover;
+
+    &:after
+      display: none;
+      background: none;
+
+    .choice
+      &__title
+        color: #ffffff
+
+  &__title
+    font-size: 40px
+    text-align: center;
+    margin-bottom: 77px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 70px
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 36px
+      margin-bottom: 50px
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 24px
+    @media (max-width: $breakpoint-sm - 1)
+      margin-bottom: 55px
+
+  &__content
+    display: flex;
+    @media (max-width: $breakpoint-md - 1)
+      text-align: center;
+
+  &__image
+    position: relative;
+    width: 513px
+    height: 517px
+    margin: 30px
+    flex-shrink 0
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+    &:before, &:after
+      content ''
+      position: absolute;
+
+    &:before
+      border: 15px solid #f6f6f7
+      left: -30px
+      top: -30px
+      right: -30px
+      bottom: -30px
+
+    &:after
+      border: 2px solid #dfb47a
+      left: -10px
+      top: -10px
+      right: -10px
+      bottom: -10px
+
+  &__text
+    position: relative;
+    z-index: 1
+    padding-left: 84px
+    @media (max-width: $breakpoint-lg - 1)
+      padding-left: 0
+
+    .btn
+      margin-bottom: 29px
+
+  &__item
+    position: relative;
+    padding-left: 101px
+    margin: 6px 0 23px
+    font-size: 20px
+    line-height: 1.5
+    font-weight: 300
+    min-height 74px
+    display: flex;
+    align-items center
+    @media (max-width: $breakpoint-md - 1)
+      min-height auto
+      padding-left: 0
+      display: block;
+
+    &:before, &:after
+      content ''
+      display: block;
+      position: absolute;
+      left: 37px
+      top: 37px
+      transform translate(-50%, -50%)
+
+    &:after
+      background: url(../../images/sprite-check-glow.png)
+      @media (max-width: $breakpoint-md - 1)
+        left: 50%
+
+    &:before
+      width: 74px
+      height: 74px
+      border: 2px solid #dfb47a
+      border-radius: 50%
+      @media (max-width: $breakpoint-md - 1)
+        position: static;
+        margin: 0 auto 22px
+        transform none
+
+    &:first-child
+      margin-top: 0
+
+    &:last-child
+      margin-bottom: 0

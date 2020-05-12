@@ -1,0 +1,179 @@
+.fundament
+  padding: 82px 0 0px
+  background-color: #f7f8fa
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 76px 0 78px
+
+  &--texture
+    background: url(../choice/choice-bg.jpg);
+    padding: 68px 0 0
+    @media (max-width: $breakpoint-lg - 1)
+      background-image: none;
+      background-color: #f7f8fa
+      padding-top: 3px
+
+    .c
+      margin-bottom: -23px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-bottom: 0
+
+  &__head
+    display: flex;
+    margin-bottom: 13px
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column-reverse
+
+  &__image
+    width: 625px
+    height: 499px
+    margin-left: 30px
+    flex-shrink 0
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0 auto 26px
+    @media (max-width: $breakpoint-lg - 1)
+      width: 100%
+      height: 442px
+
+    &:after
+      content: ''
+      position: absolute;
+      border: 10px solid #fff
+      top: 20px
+      right: 20px
+      bottom: 20px
+      left: 20px
+      opacity: .24
+      @media (max-width: $breakpoint-lg - 1)
+        left: 0
+        right: 0
+        border-left: 0
+        border-right: 0
+
+  &__title
+    font-size: 30px;
+    line-height: 1.3
+    margin-top: 5px;
+    padding-left: 3px;
+    margin-bottom: 35px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 26px
+
+  &__aside
+    @media (max-width: $breakpoint-lg - 1)
+      max-width: 625px
+      margin: 0 auto
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 16px
+      text-align: center;
+
+    p
+      font-weight: 300
+      line-height: 1.7
+      margin-bottom: 1.6em
+
+  &__content
+    position: relative;
+    font-size: 16px
+    line-height: 1.9
+    font-weight: 300
+    margin-bottom: 46px
+    @media (max-width: $breakpoint-sm - 1)
+      text-align: center;
+
+    li
+      padding-left: 43px
+      margin-bottom: 35px
+      @media (max-width: $breakpoint-lg - 1)
+        padding-left: 29px
+      @media (max-width: $breakpoint-sm - 1)
+        padding-left: 0
+
+      &:before
+        content: "0" counter(list)
+        font-weight: 500
+        color: #23273c
+        top: -1px
+        left: 0
+        @media (max-width: $breakpoint-sm - 1)
+          display: none;
+
+    b
+      display: block;
+      padding-bottom: 14px
+      margin-top: -5px
+
+      &:after
+        content ''
+        display: block;
+        width: 10px
+        height: 10px
+        background: #dfb47a
+        margin-top: 6px
+        margin-left: 3px
+        @media (max-width: $breakpoint-sm - 1)
+          display: none;
+
+  &__contentContainer
+    max-height 0
+    overflow: hidden;
+    anim(.3s)
+    @media (max-width: $breakpoint-lg - 1)
+      max-width: 690px;
+      margin: 0 auto;
+
+  &__contentInner
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 20px
+
+  &__button
+    right: 0;
+    top: 0px;
+    position: absolute;
+    border: 1px solid #dfb47a;
+    background: #dfb47a;
+    color: #ffffff
+    font-size: 16px
+    font-weight: 500
+    width: 150px
+    padding: 7px 0 7px 17px;
+    z-index: 1
+    cursor: pointer;
+    anim()
+    text-align: left;
+    @media (max-width: $breakpoint-lg - 1)
+      position: relative;
+      margin-left: auto;
+
+    &:hover
+      background: #ffffff
+      color: #23273c
+
+      &:before, &:after
+        background: #23273c
+
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+      background: #ffffff
+      anim()
+
+    &:before
+      top: 22px
+      right: 20px
+      width: 15px
+      height: 1px
+
+    &:after
+      right: 27px
+      top: 15px
+      width: 1px
+      height: 15px
+
+
+    &--active
+      &:after
+        transform rotate(90deg)

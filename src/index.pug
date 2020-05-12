@@ -1,0 +1,18 @@
+extends pug/_layout
+include modules/header/header
+
+block body
+  -var FRONT_PAGE = true
+
+  +header(false)
+  include modules/welcome/welcome
+  include modules/about/about-front
+  include modules/offers/offers
+  include modules/included/included
+  include modules/team/team
+  include modules/reserve/reserve
+  include modules/examples/examples
+  include modules/choice/choice
+  include modules/calculate/calculate
+  include modules/places/places
+  include modules/footer/footer

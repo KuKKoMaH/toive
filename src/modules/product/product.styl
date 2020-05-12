@@ -1,0 +1,357 @@
+.product
+  position: relative;
+  border: 10px solid #fff
+  padding: 5px
+  @media (max-width: $breakpoint-lg - 1)
+    border 0
+    padding: 0
+  //border-left: 0
+  //border-right: 0
+  //padding-left: 0
+  //padding-right: 0
+
+  &:before, &:after
+    content: ''
+    position: absolute;
+    left: -10px
+    bottom: -10px
+    background: #dfb47a
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+  &:before
+    width: 10px
+    height: 36px
+
+  &:after
+    width: 36px
+    height: 10px
+
+  //&--withForm &
+  //  &__info
+  //    padding-bottom: 265px
+  //    @media (max-width: $breakpoint-lg - 1)
+  //      padding-bottom: 0
+
+  &__inner
+    position: relative;
+    border: 2px solid #fff
+    padding: 3px
+    @media (max-width: $breakpoint-lg - 1)
+      border: 0
+      padding: 0
+    //border-left: 0
+    //border-right: 0
+    //padding-left: 0
+    //padding-right: 0
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+      top: -2px
+      right: -2px
+      background: #dfb47a
+      @media (max-width: $breakpoint-lg - 1)
+        display: none;
+
+    &:before
+      width: 2px
+      height: 37px
+
+    &:after
+      width: 37px
+      height: 2px
+
+  &__content
+    background: #ffffff
+    padding: 25px
+    display: flex;
+    align-items flex-start
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 36px 20px 66px
+      flex-direction column
+      align-items stretch
+    @media (max-width: $breakpoint-md - 1)
+      padding: 22px 15px 53px
+    @media (max-width: $breakpoint-sm - 1)
+      padding: 23px 7px 40px
+
+  &__images
+    width: 545px
+    @media (max-width: $breakpoint-lg - 1)
+      width: auto;
+
+  &__primaryImage
+    height: 492px
+    background-position: 50% 50%
+    background-size: cover
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+    &--single
+      @media (max-width: $breakpoint-lg - 1)
+        display: block;
+        height: 303px
+      @media (max-width: $breakpoint-md - 1)
+        height: 223px
+      @media (max-width: $breakpoint-sm - 1)
+        height: 176px
+
+  &__image
+    width: 33.333%
+    padding: 15px 9px 0
+    height: 141px
+    cursor: pointer;
+    flex-shrink 0
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 0
+      height: 303px
+    @media (max-width: $breakpoint-md - 1)
+      height: 223px
+    @media (max-width: $breakpoint-sm - 1)
+      height: 176px
+      margin: 0
+
+  &__img
+    display: block;
+    background-position: 50% 50%
+    background-size: cover
+    height: 100%
+
+  &__gallery
+    @media (max-width: $breakpoint-lg - 1)
+      overflow: hidden;
+      margin: 0
+
+      .product__galleryItems
+        display: flex;
+
+    @media (max-width: $breakpoint-md - 1)
+      margin: 0 -9px
+
+  &__galleryItems
+    display: flex;
+    flex-wrap wrap
+    margin: 0 -9px
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0
+      flex-wrap nowrap
+      display: none;
+
+
+  &__title
+    font-size: 30px
+    color: #191f27
+    margin-bottom: 12px
+    margin-top: 6px;
+    padding-left: 2px;
+
+  &__subtitle
+    color: #dfb47a
+    margin-bottom: 5px
+    padding-left: 5px
+
+  &__info
+    padding-left: 40px
+    flex: 1
+    @media (max-width: $breakpoint-lg - 1)
+      padding-left: 0
+
+  &__table
+    padding-top: 18px
+    margin-bottom: 22px
+    padding-left: 30px
+    max-width 530px
+    font-size: 16px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 47px
+      max-width: none
+    @media (max-width: $breakpoint-md - 1)
+      padding-top: 29px
+      padding-left: 34px
+      margin-bottom: 33px
+    @media (max-width: $breakpoint-sm - 1)
+      padding-top: 38px
+      padding-left: 34px
+      margin-bottom: 33px
+
+    table
+      width: 100%
+
+    tr
+      @media (max-width: $breakpoint-sm - 1)
+        display: block;
+        width: 100%
+        border-bottom: 1px dashed #e0e0e0
+        padding-bottom: 4px
+        margin-bottom: 3px
+        &:last-child
+          border-bottom: 0
+
+    td
+      padding: 8px 0
+      border-bottom: 1px dashed #e0e0e0
+      @media (max-width: $breakpoint-sm - 1)
+        display: block;
+        width: 100%
+        border-bottom: 0
+        padding: 0
+
+    td:first-child
+      position: relative;
+      font-weight: bold
+      color: #dfb47a
+      @media (max-width: $breakpoint-sm - 1)
+        padding-bottom: 2px
+
+    td:last-child
+      width: 1px
+      white-space nowrap
+      font-weight: 300
+      color: #191f27
+      @media (max-width: $breakpoint-sm - 1)
+        width: 100%
+
+    tr:last-child td
+      border-bottom: 0
+
+  &__row
+    position: relative;
+    border-bottom: 1px dashed #e0e0e0
+    display: flex;
+    font-size: 16px
+    padding: 8px 0
+    @media (max-width: $breakpoint-md - 1)
+      padding-right: 18px
+    @media (max-width: $breakpoint-sm - 1)
+      flex-direction column
+      padding-right: 0
+
+
+  &__icon
+    svg, &:before
+      position: absolute;
+      right: 100%
+      margin-right: 18px
+      top: 50%
+      transform translate(50%, -50%)
+
+    svg
+      opacity: .35
+      fill: #000
+      width: 20px
+      height: 20px
+
+    &:before
+      content: ''
+    icons = calendar geo crane
+    for sprite in icons
+      &--{sprite}:before
+        background: url('../../images/sprite-' + sprite + '-white.png')
+
+  &__text
+    font-size: 16px
+    line-height: 1.875
+    font-weight: 300
+    padding-bottom: 22px
+    @media (max-width: $breakpoint-md - 1)
+      padding-right: 18px
+      padding-bottom: 10px
+    @media (max-width: $breakpoint-sm - 1)
+      padding-bottom: 0
+      padding-right: 0
+
+  &__log
+    border-top: 1px solid #e5e5e5
+    padding-top: 14px
+    @media (max-width: $breakpoint-md - 1)
+      padding-right: 18px
+    @media (max-width: $breakpoint-sm - 1)
+      padding-right: 0
+
+  &__logItem
+    display: flex;
+    font-size: 16px
+    line-height: 1.875
+
+  &__date
+    font-weight: bold
+    color: #dfb47a
+    width: 120px
+    flex-shrink 0
+    @media (max-width: $breakpoint-sm - 1)
+      width: 90px
+
+  &__form
+    position: relative;
+    //right: 45px
+    //bottom: 45px
+    max-width: 603px
+    width: 100%
+    border: 5px solid #dfb47a
+    text-align: center;
+    padding: 34px 15px 42px 15px
+    z-index: 1
+    @media (max-width: $breakpoint-lg - 1)
+      position: relative;
+      right: 0
+      bottom: 0
+      margin: 47px auto 0
+    @media (max-width: $breakpoint-md - 1)
+      margin-top: 41px
+    @media (max-width: $breakpoint-sm - 1)
+      margin: 42px -7px 0;
+      width: auto;
+
+    &:before
+      content: ''
+      position: absolute;
+      border: 1px solid #dfb47a
+      left: 5px
+      top: 5px
+      bottom: -18px
+      right: -15px
+      pointer-events none
+      @media (max-width: $breakpoint-md - 1)
+        display: none;
+
+    h3
+      font-size: 18px
+      font-weight: bold;
+      margin-bottom: 10px
+
+    h4
+      font-size: 16px
+      font-weight: bold;
+      margin-bottom: 34px
+      @media (max-width: $breakpoint-md - 1)
+        margin-bottom: 45px
+
+  &__inputs
+    display: flex;
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction column
+      max-width 344px
+      margin: 0 auto
+
+    > *
+      flex 1
+      margin: 0 8px
+      @media (max-width: $breakpoint-md - 1)
+        margin: 0 0 36px
+
+        &:last-child
+          margin-bottom: 0
+
+  &__pagination
+    display: none;
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex;
+      align-items center
+      justify-content center
+      margin-top: 43px
+      margin-bottom: 40px
+    @media (max-width: $breakpoint-md - 1)
+      margin-top: 40px
+    @media (max-width: $breakpoint-sm - 1)
+      margin-top: 42px

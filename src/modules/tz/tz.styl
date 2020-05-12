@@ -1,0 +1,69 @@
+.tz
+  background: url(tz-bg.jpg) 50% 50% no-repeat
+  background-size: cover;
+  position: relative;
+  @media (max-width: $breakpoint-md - 1)
+    background-image: none
+
+  .c
+    display: flex;
+    justify-content flex-end
+    @media (max-width: $breakpoint-lg - 1)
+      justify-content center
+    @media (max-width: $breakpoint-md - 1)
+      display: block;
+
+  &__image
+    position: absolute;
+    z-index: 2
+    left: 50%;
+    margin-left: -641px;
+    top: 60px;
+    pointer-events none
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+  &__form
+    width: 100%
+    max-width 562px
+    border: 10px solid #fff
+    background: #343847
+    margin-top: 45px
+    margin-bottom: -62px
+    position: relative;
+    z-index: 1
+    padding: 38px 67px 60px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-top: 62px
+    @media (max-width: $breakpoint-md - 1)
+      margin: 0 -10px
+      max-width none
+      width: auto
+      border-left: 0
+      border-right: 0
+      padding-left: 37px
+      padding-right: 37px
+    @media (max-width: $breakpoint-sm - 1)
+      padding: 38px 9px 55px
+
+    .btn
+      margin-top: 18px
+      @media (max-width: $breakpoint-sm - 1)
+        margin-top: 13px
+
+    .input
+      margin-bottom: 27px
+
+    textarea
+      min-height 124px
+
+  &__title
+    text-align: center;
+    color: #ffffff
+    font-size: 24px
+    line-height: 1.25
+    margin-bottom: 50px
+    @media (max-width: $breakpoint-sm - 1)
+      margin-bottom: 30px
+      br
+        display: none;

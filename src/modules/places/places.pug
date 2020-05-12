@@ -1,0 +1,25 @@
+.places.lines(class=(FRONT_PAGE && 'places--extend'))
+  if(FRONT_PAGE)
+    img.places__image.lazy(data-src='modules/places/img/places-image.png')
+  if(!FRONT_PAGE)
+    img.places__image2.lazy(data-src='modules/places/img/places-image2.jpg')
+  .c
+    .places__map
+    .places__block
+      h2.places__title Выбор дома это всегда тяжелое решение поэтому, если у Вас остались вопросы мы сможем ответить на них и подобрать для Вас лучшее решение.
+      .places__text
+        p Заполните форму ниже и мы ответим на Ваши вопросы иподберем варианты проектов именно для Вас
+      .places__form
+        .input
+          svg: use(xlink:href="#icon-phone")
+          input(type='tel' placeholder='Ваш номер телефона:')
+        .input
+          svg: use(xlink:href="#icon-mail")
+          input(type='email' placeholder='Ваша электронная почта:')
+        .input
+          svg: use(xlink:href="#icon-question")
+          textarea(placeholder='Напишите свой вопрос или опишите Ваши пожелания:')
+        button.btn ОТПРАВИТЬ НА РАСЧЕТ
+script.
+  var PLACES = [[60.014619, 30.421228], [59.826051, 30.462427], [59.808415, 30.088892]];
+

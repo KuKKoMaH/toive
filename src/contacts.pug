@@ -1,0 +1,10 @@
+extends pug/_layout
+include modules/header/header
+include modules/hero/hero
+
+block body
+  +header(false)
+  +hero('modules/hero/img/hero-bg-contacts.jpg', 'Контакты компании Toive<br/> в Санкт-Петербурге')
+  include modules/map/map
+  include modules/contactsForm/contactsForm
+  include modules/footer/footer

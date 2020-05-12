@@ -1,0 +1,303 @@
+.offers
+  background: url(./img/offers-bg.jpg) 50% 50% no-repeat
+  color: #ffffff
+  height: 785px
+  position: relative;
+  z-index: 1
+  @media (max-width: $breakpoint-lg - 1)
+    height: auto;
+    background-size: cover;
+
+  .c
+    position: relative;
+    height: 100%
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: -45px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 0
+
+  &__title
+    padding-top: 100px
+    font-size: 40px
+    margin-bottom: 93px
+    color: #ffffff
+    @media (max-width: $breakpoint-lg - 1)
+      text-align: center;
+      padding-top: 72px
+      margin-bottom: 50px
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 36px
+      line-height: 1.35
+      padding-top: 54px
+      margin-bottom: 45px
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 24px
+      line-height: 1.5
+      padding-top: 50px
+      margin-bottom: 45px
+
+  &__info
+    position: absolute;
+    top: 0
+    left: 0
+    display: flex;
+    align-self flex-start
+    opacity: 0
+    pointer-events none
+    anim()
+    @media (max-width: $breakpoint-lg - 1)
+      left: 0
+      width: 100%
+      justify-content center
+    @media (max-width: $breakpoint-md - 1)
+      opacity: 1
+      pointer-events all
+      position: static;
+      margin-bottom: 50px
+    @media (max-width: $breakpoint-sm - 1)
+      flex-direction column
+      align-items center
+
+  &__text
+    font-weight: 300
+    position: relative;
+    z-index: 1
+    padding-left: 32px
+    margin-right: 105px
+    @media (max-width: $breakpoint-md - 1)
+      padding-left: 0
+    @media (max-width: $breakpoint-sm - 1)
+      margin-right: 0
+      text-align: center;
+      margin-bottom: 32px
+      &:last-child
+        margin-bottom: 0
+
+    &:last-child
+      margin-right: 0
+
+    &:before
+      content: ''
+      position: absolute;
+      width: 89px
+      height: 89px
+      background: #232639
+      z-index: -1
+      left: 0
+      top: -17px
+      @media (max-width: $breakpoint-md - 1)
+        display: none;
+
+  &__label
+    margin-bottom: 4px
+
+  &__value
+    font-size: 30px
+
+  &__items
+    height: 546px
+    display: flex;
+    align-items flex-end
+    position: relative;
+    @media (max-width: $breakpoint-lg - 1)
+      height: 875px
+    @media (max-width: $breakpoint-md - 1)
+      height: auto
+      align-items flex-start
+      margin-bottom: -126px
+    @media (max-width: $breakpoint-sm - 1)
+      margin-bottom: -38px
+
+  &__item
+    @media (max-width: $breakpoint-lg - 1)
+      flex: 1
+    @media (max-width: $breakpoint-md - 1)
+      flex: auto
+      flex-shrink 0
+
+  &__item--active &
+    &__img
+      opacity: 1
+
+    &__info
+      opacity: 1
+      pointer-events all
+
+    &__links
+      opacity: 1
+      pointer-events all
+
+    &__button
+      @media (min-width: $breakpoint-md)
+        background: #dfb47a
+        height: 246px
+        padding-top: 165px
+        &:before
+          opacity: 0
+
+        &:after
+          opacity: 1
+
+        @media (max-width: $breakpoint-lg - 1)
+          height: 200px
+          padding-top: 135px
+
+      &:before, &:after
+        top: 70px
+
+        @media (min-width: $breakpoint-lg)
+          top: 90px
+
+  &__button
+    width: 210px
+    height: 179px
+    background: #212638
+    position: relative;
+    color: #ffffff
+    text-align: center;
+    padding-top: 125px
+    margin-right: 1px
+    cursor: pointer;
+    anim()
+    @media (max-width: $breakpoint-lg - 1)
+      font-size: 16px
+      width: auto
+      height: 155px
+      padding-top: 107px
+    @media (max-width: $breakpoint-md - 1)
+      max-width 354px
+      margin: 0 auto
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+      left: 50%
+      top: 60px
+      transform translate(-50%, -50%)
+      anim()
+
+    &:after
+      opacity: 0
+
+    &--1:before
+      background: url(./img/sprite-offers-1.png)
+
+    &--1:after
+      background: url(./img/sprite-offers-1-white.png)
+
+    &--2:before
+      background: url(./img/sprite-offers-2.png)
+
+    &--2:after
+      background: url(./img/sprite-offers-2-white.png)
+
+    &--3:before
+      background: url(./img/sprite-offers-3.png)
+
+    &--3:after
+      background: url(./img/sprite-offers-3-white.png)
+
+    &--4:before
+      background: url(./img/sprite-offers-4.png)
+
+    &--4:after
+      background: url(./img/sprite-offers-4-white.png)
+
+  &__links
+    position: absolute;
+    top: 141px
+    left: 0
+    z-index: 1
+    opacity: 0
+    pointer-events none
+    anim()
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex;
+      top: 600px
+      width: 100%
+      > *
+        flex: 1
+        padding-left: 0
+        padding-right: 0
+
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction column
+      max-width 354px
+      margin: 0 auto
+      position: static;
+      opacity: 1
+      pointer-events all
+      margin-bottom: 38px
+      text-align: center;
+
+    .btn
+      margin-right: 38px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-right: 10px
+      @media (max-width: $breakpoint-md - 1)
+        margin-right: 0
+        margin-bottom: 27px
+        padding: 0 5px
+        width: 100%
+        &:last-child
+          margin-bottom: 0
+
+      &:last-child
+        margin-right: 0
+
+  &__img
+    position: absolute;
+    width: 407px
+    height: 694px
+    right: 0
+    bottom: 0
+    opacity: 0
+    background-size: cover;
+    background-position: 50% 50%
+    anim()
+    @media (max-width: $breakpoint-lg - 1)
+      width: 100%
+      height: 433px
+      bottom: auto;
+      top: 122px
+    @media (max-width: $breakpoint-md - 1)
+      position: relative;
+      margin-bottom: 32px
+      opacity: 1
+      top: 0
+      left: 0
+    @media (max-width: $breakpoint-sm - 1)
+      height: 290px
+      margin-bottom: 45px
+
+    &:after
+      content: ''
+      display: block;
+      position: absolute;
+      left: 20px
+      top: 20px
+      right: 20px
+      bottom: 20px
+      border: 10px solid #fff
+      @media (max-width: $breakpoint-sm - 1)
+        border-width 1px
+        left: 6px
+        top: 6px
+        right: 6px
+        bottom: 6px
+
+
+  &__pagination
+    display: none;
+    @media (max-width: $breakpoint-md - 1)
+      display: flex;
+      height: 274px
+      background: #f7f8fa
+      margin: 0 -10px
+      justify-content center
+      align-items flex-end
+      padding-bottom: 51px
+    @media (max-width: $breakpoint-sm - 1)
+      height: 164px
+      padding-bottom: 35px
+

@@ -1,0 +1,52 @@
+.input
+  position: relative;
+  svg
+    position: absolute;
+    left: 30px
+    top: 33px
+    transform translateY(-50%)
+    pointer-events none
+    opacity: .45
+    fill: #ffffff
+    width: 16px
+    height: 16px
+    @media (max-width: $breakpoint-lg - 1)
+      left: 20px
+
+  input, textarea
+    display: block
+    width: 100%
+    border: 2px solid #deb379
+    color: #ffffff
+    padding: 23px 20px 24px 55px
+    font-size: 14px
+    font-weight: 300
+    placeholder(#fff)
+    @media (max-width: $breakpoint-lg - 1)
+      padding-left: 42px
+
+    &.wpcf7-not-valid
+      border-color: #ed1d25
+
+  textarea
+    padding-top: 10px
+    padding-bottom: 10px
+    min-width 100%
+    max-width 100%
+    min-height 64px
+    max-height 200px
+    line-height: 1.45
+
+  &--textBlack
+    input, textarea
+      color: #34383e
+      placeholder(#34383e);
+
+    svg
+      fill: #34383e
+
+  &--noIcon
+    input, textarea
+      padding-left: 26px
+
+

@@ -1,0 +1,193 @@
+html
+  font-family: 'Roboto', sans-serif;
+  color: #191f27
+  font-size: 18px
+  line-height: 1.2
+
+html, body
+  overflow-x: hidden
+
+h1, h2, h3, h4, h5, h6
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  color: #23273c
+
+//line-height: 1.35
+//@media (max-width: $breakpoint-lg - 1)
+//  text-align: center;
+
+b
+  font-weight: 500
+
+p
+  margin-bottom: 1.1em
+
+a
+  //color: #009dd8
+  //text-decoration: underline;
+
+  &:hover
+    text-decoration: underline;
+
+//  color: darken(#009dd8, 30%)
+//  text-decoration: none;
+
+ul, ol
+  margin-bottom: 1.55em
+
+  li
+    margin-bottom: .5em
+    position relative
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: .7em
+
+ul
+  li
+    padding-left: 20px
+    //@media (max-width: $breakpoint-lg - 1)
+    //  padding-left: 15px
+    //@media (max-width: $breakpoint-md - 1)
+    //  padding-left: 10px
+
+    &:before
+      content: ''
+      width: 7px
+      height: 7px
+      background: #dfb47a
+      position absolute
+      top: .6em;
+      left: 0px;
+
+ol
+  counter-reset: list;
+
+  li
+    padding-left: 24px
+
+    &:before
+      counter-increment: list;
+      content: counter(list) "."
+      position absolute
+      top: 0;
+      left: 2px;
+      color: $red
+      font-weight: bold;
+
+//table
+//  border: 1px solid #f1f1f1
+//  border-radius: 5px
+//  font-size: 14px
+//  border-collapse unset
+//  overflow: hidden;
+//  margin-bottom: 35px
+//  @media (max-width: $breakpoint-md - 1)
+//    font-size: 13px
+//
+//  td
+//    border-left: 1px solid #f1f1f1
+//    border-bottom: 1px solid #f1f1f1
+//    //border: 1px solid #f1f1f1
+//    padding: 8px 13px
+//    @media (max-width: $breakpoint-md - 1)
+//      padding: 4px 8px
+//
+//    &:first-child
+//      border-left: 0
+//
+//  tr:nth-child(2n)
+//    td
+//      background: #fbfbfb
+//
+//  tr:last-child
+//    td
+//      border-bottom: 0
+
+.c
+  padding: 0 10px
+  margin-left: auto
+  margin-right: auto
+  max-width: $container-lg
+  width: 100%
+  @media (max-width: $breakpoint-lg - 1)
+    max-width: $container-md
+    padding: 0 20px
+  @media (max-width: $breakpoint-md - 1)
+    max-width: 100%
+    padding: 0 10px
+
+.page
+  //anim(.2s)
+  min-height 100vh
+  display: flex
+  flex-direction column
+  will-change filter
+
+  &.mfp-body-open
+    filter: blur(10px)
+    overflow: hidden
+
+.fc
+  display: flex;
+  align-items center
+
+.fs
+  display: flex;
+  align-items start
+
+.f
+  flex: 1
+
+.fc, .fs
+  @media (max-width: $breakpoint-md - 1)
+    flex-direction column
+
+//.lazy
+//  visibility: hidden
+//  opacity: 0
+//
+//  &.lazy--visible
+//    visibility: inherit
+//    opacity: 1
+
+//transform none
+
+img[data-src],
+img[data-srcset]
+  //display: block;
+  min-height: 1px;
+
+::-webkit-scrollbar { /* for Mac OS X support */
+  width: 0;
+}
+
+.hidden
+  display: none !important
+
+#sprites
+  position: absolute
+  width: 0
+  height: 0
+  top: 0
+  left: 0
+
+del, s
+  text-decoration: line-through
+
+.center
+  text-align: center;
+
+.right
+  text-align: right;
+
+.paroller
+  will-change: transform;
+  transition: transform 0.1s ease-out !important;
+  @media (pointer: coarse)
+    transition none !important
+
+.lines
+  background-image: url('data:image/gif;base64,R0lGODlhAgUBAPAAAOjp6wAAACH5BAEAAAEALAAAAAACBQEAAAImRI6py+0Po5y02ouz3rz7D4aYIZbmiabqyrbue5DwTNf2jee6CBQAOw==')
+  background-repeat repeat-y
+  background-position: 50% 50%
+  @media (max-width: $breakpoint-lg - 1)
+    background-image: none;

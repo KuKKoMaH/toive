@@ -1,0 +1,21 @@
+cf()
+  &:after
+    content: ''
+    display: table
+    clear: both
+
+anim(duration = .1s)
+  transition: all duration ease-in
+
+placeholder($color)
+  &::-webkit-input-placeholder
+    color: $color
+
+  &::-moz-placeholder
+    color: $color
+
+  &:-moz-placeholder
+    color: $color
+
+  &:-ms-input-placeholder
+    color: $color

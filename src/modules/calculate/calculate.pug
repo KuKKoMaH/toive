@@ -1,0 +1,23 @@
+.calculate.lines(class=(FRONT_PAGE && 'calculate--texture'))
+  .c
+    .calculate__container
+      img.calculate__image.lazy(data-src='modules/calculate/calculate-image.png')
+      .calculate__text
+        h2.calculate__title И не беда, если вы уже получили проект или расчет от другой компании
+        p: b Выбирать лучшее - это правильно и совершенно нормально
+        p Вы можете отправить нам уже готовый проект или расчет и получить от нас предложение, возможно, намного более выгодное чем вы уже получили от другой компании.
+        h2.calculate__title Прикрепите расчет или проект
+      .calculate__form
+        .calculate__left
+          .calculate__inputs
+            .input.input--textBlack
+              svg: use(xlink:href="#icon-phone")
+              input(type='tel' placeholder='Ваш номер телефона:')
+            .input.input--textBlack: input( placeholder='Ваш комментарий при необходимости:')
+          .calculate__file
+            .calculate__fileText Прикрепите сюда свои файлы
+            input.calculate__fileInput(type='file')
+        .calculate__button
+          button.btn ОТПРАВИТЬ НА РАСЧЕТ
+
+

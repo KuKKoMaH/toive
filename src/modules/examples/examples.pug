@@ -1,0 +1,67 @@
+.examples.lines(class=FRONT_PAGE && 'examples--texture')
+  .c
+    h2.examples__title Посмотрите некоторые наши дома #[br]в процессе строительства:
+    .examples__slider
+      .examples__items
+        each i in [1,2,3]
+          .examples__item
+            .product: .product__inner
+              .product__content
+
+                .product__images
+                  .product__primaryImage.product__primaryImage--single.lazy(data-src='modules/examples/examples-item.jpg')
+                  .product__galleryItems
+                    .product__image(data-image='modules/examples/examples-item.jpg'): .product__img.lazy(data-src='modules/examples/examples-item.jpg')
+                    .product__image(data-image='modules/examples/examples-item.jpg'): .product__img.lazy(data-src='modules/examples/examples-item.jpg')
+                    .product__image(data-image='modules/examples/examples-item.jpg'): .product__img.lazy(data-src='modules/examples/examples-item.jpg')
+
+                .product__info
+                  .product__table: table: tbody
+                    tr
+                      td
+                        .product__icon.product__icon--geo
+                        | Где строили:
+                      td Гатчинский район
+                    tr
+                      td
+                        .product__icon: svg: use(xlink:href="#icon-clock")
+                        | Время постройки:
+                      td 24.05.12 - 11.07.12 - Всего 3.5 месяца
+                    tr
+                      td
+                        .product__icon: svg: use(xlink:href="#icon-brick")
+                        | Вид материала:
+                      td Кирпич
+                    tr
+                      td
+                        .product__icon: svg: use(xlink:href="#icon-s")
+                        | Площадь:
+                      td 14х14 - 590 м2, 2 этажа + подвал
+                    tr
+                      td
+                        .product__icon.product__icon--calendar
+                        | Срок постройки:
+                      td 24.05.12 - 11.07.12 - Всего 3.5 месяца
+                    tr
+                      td
+                        .product__icon: svg: use(xlink:href="#icon-rouble")
+                        | Стоимость:
+                      td 15 930 000 рублей
+                  .product__text
+                    p Василий обратился в компанию «АРСЕНАЛ» 24.05.2012. Он хотел построить дом для круглогодичного проживания с семьей из 4 человек. У него был участок в г. Гатчина. Он пришел к нам в компанию со своим проектом, где хотел внести правки. Мы учли его пожелания и через 7 дней был.
+
+                  .product__log
+                    .product__logItem
+                      .product__date 10.06.2012
+                      .product__event: b Был заложен фундамент.
+                    .product__logItem
+                      .product__date 25.07.2012
+                      .product__event: b Возведены стены и крыша.
+                    .product__logItem
+                      .product__date 11.08.2012
+                      .product__event
+                        p Была сдача проекта + окна, двери лестницы. Позже он заказал у нас дизайн-проект + отделку "под ключ". Что из этого вышло можно увидеть на фотографиях. Хотите такой же дом? Оставьте заявку или звоните по телефону.
+
+      .examples__pagination
+        button.arrow.arrow--left: svg: use(xlink:href="#icon-slider-arrow")
+        button.arrow.arrow--right: svg: use(xlink:href="#icon-slider-arrow")

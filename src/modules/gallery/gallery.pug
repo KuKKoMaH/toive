@@ -1,0 +1,9 @@
+.gallery
+  .gallery__slider
+    .gallery__items
+      each i in [1,2,3,4,5]
+        .gallery__item: .gallery__img(style='background-image: url(modules/gallery/gallery-img.jpg)')
+
+  .gallery__pagination
+    button.arrow.arrow--left: svg: use(xlink:href="#icon-slider-arrow")
+    button.arrow.arrow--right: svg: use(xlink:href="#icon-slider-arrow")

@@ -1,0 +1,9 @@
+extends pug/_layout
+include modules/header/header
+include modules/hero/hero
+
+block body
+  +header(false)
+  +hero('modules/hero/img/hero-bg-test.jpg', 'Пройдите тест и мы сразу подберем,<br/> какой дом лучше подходит под Ваши<br/> потребности')
+  include modules/test/test
+  include modules/footer/footer

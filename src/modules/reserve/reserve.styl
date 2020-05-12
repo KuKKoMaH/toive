@@ -1,0 +1,84 @@
+.reserve
+  background: url(./reserve-bg.jpg) 50% 50% no-repeat
+  color: #ffffff
+  padding-top: 75px
+  @media (max-width: $breakpoint-lg - 1)
+    background: url(./reserve-bg-sm.jpg) 50% 50% no-repeat
+    background-size: cover
+    text-align: center;
+    padding-top: 55px
+  @media (max-width: $breakpoint-sm - 1)
+    padding-top: 45px
+
+  .c
+    position: relative;
+    z-index: 1
+
+  &__title
+    font-size: 36px
+    margin-bottom: 22px
+    color: #ffffff
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 24px
+
+  &__subtitle
+    font-size: 24px
+    margin-bottom: 57px
+    max-width 730px
+    @media (max-width: $breakpoint-sm - 1)
+      font-size: 18px
+
+  &__inputs
+    display: flex;
+    margin-bottom: 78px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 38px
+      justify-content space-between
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction column
+      align-items center
+      margin-bottom: 52px
+
+    .input
+      max-width: 350px
+      width: 100%
+      margin-right: 34px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-right: 0
+      @media (max-width: $breakpoint-md - 1)
+        margin-bottom: 30px
+        &:last-child
+          margin-bottom: 0
+
+      &:last-child
+        margin-right: 0
+
+  .btn
+    margin-bottom: -32px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 45px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 68px
+
+  &__img
+    position: absolute;
+    bottom: 0
+    left: 50%
+    margin-left: 405px
+    pointer-events none
+    z-index: -1
+    @media (max-width: $breakpoint-lg - 1)
+      margin-left: 505px
+    @media (max-width: $breakpoint-md - 1)
+      display: none;
+
+  &__top, &__left
+    position: absolute;
+
+  &__top
+    bottom: 100%
+    right: 0
+
+  &__left
+    right: 100%
+    bottom: 0

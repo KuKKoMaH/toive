@@ -1,0 +1,124 @@
+//  @media (max-width: $breakpoint-lg - 1)
+.places
+  position: relative;
+  background-color: #f7f8fa
+  padding: 20px 0 73px
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 0 0 71px
+  @media (max-width: $breakpoint-sm - 1)
+    padding-bottom: 56px
+
+  &--extend
+    padding: 85px 0 67px
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 0 0 71px
+    @media (max-width: $breakpoint-sm - 1)
+      padding-bottom: 56px
+
+  .c
+    position: relative;
+
+  &__image
+    position: absolute;
+    right: 50%
+    margin-right: 366px
+    bottom: 0
+    pointer-events none
+    z-index: 1
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+  &__image2
+    position: absolute;
+    right: 50%
+    margin-right: 503px
+    bottom: 2px
+    pointer-events none
+    //z-index: -1
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+  &__map
+    height: 625px
+    position: absolute;
+    left: 10px
+    right: 10px
+    top: -37px
+    border: 10px solid #fff
+    background: #d7dfe6
+    box-shadow -5px 25px 29px rgba(#000, .1)
+    @media (max-width: $breakpoint-lg - 1)
+      position: relative;
+      left: 0px
+      right: 0px
+      margin-left: -20px
+      margin-right: -20px
+      top: 0
+      height: 594px
+      box-shadow none
+    @media (max-width: $breakpoint-md - 1)
+      height: 360px
+    @media (max-width: $breakpoint-sm - 1)
+      height: 408px
+
+    &:after
+      content: ''
+      position: absolute;
+      border: 1px solid #fff
+      top: 10px
+      right: 10px
+      bottom: 10px
+      left: 10px
+      pointer-events none
+
+  &__block
+    margin-top: 37px
+    position: relative;
+    max-width 562px
+    background: #353847
+    border: 10px solid #fff
+    margin-left: auto;
+    margin-right: 36px
+    text-align: center;
+    color: #ffffff
+    padding: 38px 30px 39px
+    z-index: 1
+    @media (max-width: $breakpoint-lg - 1)
+      margin-right: auto;
+      margin-top: -137px
+    @media (max-width: $breakpoint-md - 1)
+      border-top: 0
+      margin-top: 0
+      padding-top: 31px
+      box-shadow -5px 25px 29px rgba(#000, .1)
+    @media (max-width: $breakpoint-sm - 1)
+      border-left: 0
+      border-right: 0
+      margin-left: -10px
+      margin-right: -10px
+      padding-top: 21px
+
+  &__title
+    font-size: 20px
+    color: #ffffff
+    line-height: 1.45
+    margin-bottom: 16px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 22px
+
+  &__text
+    font-size: 16px
+    line-height: 1.45
+    font-weight: 300
+
+  &__form
+    max-width 409px
+    margin: 27px auto 0
+
+    .input
+      margin-bottom: 23px
+
+    .btn
+      margin: 0 auto
+      max-width 349px
+      width: 100%

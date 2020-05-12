@@ -1,0 +1,101 @@
+.test
+  .test__step.test__step--grey.test__step--active
+    .c
+      .test__container
+        .test__decor
+        h2.test__title Планируете ли вы жить в доме зимой?
+        .test__label 1
+        .test1__container
+          .test1__item(style='background-image: url(modules/test/img/test-step1-1.jpg)' data-value='summer')
+            .test1__title Только летнее проживание
+          .test1__item(style='background-image: url(modules/test/img/test-step1-2.jpg)' data-value='full')
+            .test1__title Всесезонное проживание
+
+  .test__step
+    .c
+      .test__container
+        .test__decor
+        h2.test__title Выберите желаемую площадь дома и количество этажей
+        .test__label 2
+        .test2__container
+          .test2__items
+            .test2__item(style='background-image: url(modules/test/img/test-step2-1.jpg)' data-value='1')
+              .test2__title 1 этаж
+            .test2__item(style='background-image: url(modules/test/img/test-step2-2.jpg)' data-value='1attic')
+              .test2__title 1 этаж с мансардой
+            .test2__item(style='background-image: url(modules/test/img/test-step2-3.jpg)' data-value='2')
+              .test2__title 2 этажа
+            .test2__item(style='background-image: url(modules/test/img/test-step2-4.jpg)' data-value='3')
+              .test2__title 3 этажа
+          .test2__checks
+            label.test2__check
+              input(type='radio' name='s' value='<100')
+              .test2__text До 100 м#[sup 2]
+            label.test2__check
+              input(type='radio' name='s' value='<200')
+              .test2__text До 200 м#[sup 2]
+            label.test2__check
+              input(type='radio' name='s' value='>200')
+              .test2__text Более 200 м#[sup 2]
+
+  .test__step.test__step--grey
+    .c
+      .test__container
+        .test__decor
+        h2.test__title Какая площадь остекления Вам нравится больше всего?
+        .test__label 3
+        .test3__items
+          .test3__item(data-value='standart')
+            img.test3__img(src='modules/test/img/test-step3-1.png')
+            .test3__title Стандартная площадь#[br] остекления
+          .test3__item(data-value='extended')
+            img.test3__img(src='modules/test/img/test-step3-2.png')
+            .test3__title Увеличенная площадь#[br] остекления
+          .test3__item(data-value='full')
+            img.test3__img(src='modules/test/img/test-step3-3.png')
+            .test3__title Максимальная площадь#[br] остекления
+
+  .test__step
+    .c
+      .test__container
+        .test__decor
+        h2.test__title Выберите стиль который Вам больше по душе
+        .test__label 4
+        .test4__items
+          .test4__item
+            .test4__image: div(style='background-image: url(modules/test/img/test-step4-1.jpg)' data-value='minimal')
+            .test4__title Совеременный#[br] (хайтек, минимализм)
+          .test4__item
+            .test4__image: div(style='background-image: url(modules/test/img/test-step4-2.jpg)' data-value='classic')
+            .test4__title Классика
+          .test4__item
+            .test4__image: div(style='background-image: url(modules/test/img/test-step4-3.jpg)' data-value='england')
+            .test4__title Английский
+          .test4__item
+            .test4__image: div(style='background-image: url(modules/test/img/test-step4-4.jpg)' data-value='modern')
+            .test4__title Модерн
+          .test4__item
+            .test4__image: div(style='background-image: url(modules/test/img/test-step4-5.jpg)' data-value='finland')
+            .test4__title Финский
+          .test4__item
+            .test4__image: div(style='background-image: url(modules/test/img/test-step4-3.jpg)' data-value='england')
+            .test4__title Английский
+          .test4__item
+            .test4__image: div(style='background-image: url(modules/test/img/test-step4-4.jpg)' data-value='modern')
+            .test4__title Модерн
+          .test4__item
+            .test4__image: div(style='background-image: url(modules/test/img/test-step4-5.jpg)' data-value='finland')
+            .test4__title Финский
+
+  .test__step.test__step--static
+    include ../items/items-test
+    include ../individual/individual
+    include ../included/included
+    include ../team/team
+    include ../reserve/reserve
+    include ../examples/examples
+    include ../choice/choice
+    include ../calculate/calculate
+    include ../items/items
+    include ../places/places
+

@@ -1,0 +1,86 @@
+.select
+  position: relative;
+
+  .selectize-control
+    position: relative;
+
+    &:hover
+      .selectize-input
+        border-color: #DEDEDE;
+
+  .selectize-input
+    border: 2px solid #deb379
+    background: #ffffff
+    padding: 23px 20px 24px 26px
+    font-size: 14px
+    font-weight: 300
+    position: relative
+    white-space: nowrap
+    anim()
+
+    //@media (max-width: $breakpoint-sm - 1)
+    //  padding-top: 8px
+    //  padding-bottom: 8px
+
+    &:after
+      content: ''
+      display: block
+      background: url(../../images/sprite-select_arrow.svg)
+      position: absolute
+      right: 24px
+      top: 50%
+      margin-top: -3px
+
+    &.disabled
+      background-color: #dfdfdf
+
+    .item
+      vertical-align: top
+      display: inline-block
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+      max-width: 100%
+
+    input
+      font-size: 1em
+      display: inline-block
+      vertical-align: top
+      padding: 0
+      min-height: 0
+      max-height: none
+      max-width: 100%
+      margin: 0 2px 0 0
+      text-indent: 0
+      border: 0 none
+      background: none
+      line-height: inherit
+      -webkit-user-select: auto
+      -webkit-box-shadow: none
+      box-shadow: none
+
+  .selectize-dropdown
+    position: absolute
+    z-index: 10
+    background: #eeeeee
+    overflow-y: auto
+    //width: auto !important;
+    min-width: 100%;
+
+    .option
+      font-size: 14px
+      font-weight: 300
+      padding: 22px 28px
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      cursor: pointer
+      border-bottom: 1px solid #d5d5d8
+      anim()
+
+      &:last-child
+        border-bottom: 0
+
+      &.active, &:hover
+        background-color: #dfb47a
+        color: #ffffff
