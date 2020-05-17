@@ -4,7 +4,13 @@
       .stock__items
         each i in [1,2,3,4,5]
           .stock__item
-            .stock__image(style='background-image: url(modules/stock/stock-image.jpg)')
+            .stock__image
+              .stock__primary(style='background-image: url(modules/stock/stock-image.jpg)')
+              //.stock__images
+                .stock__secondary(data-image='modules/stock/stock-image.jpg'): div(style='background-image: url(modules/stock/stock-image.jpg)')
+                .stock__secondary(data-image='modules/stock/stock-image.jpg'): div(style='background-image: url(modules/stock/stock-image.jpg)')
+                //.stock__secondary: div(style='background-image: url(modules/stock/stock-image.jpg)')
+                //.stock__secondary: div(style='background-image: url(modules/stock/stock-image.jpg)')
             .stock__content
               .stock__title
                 | Дом из газобетона серии Фурла всего 5 500 000 руб
@@ -19,6 +25,10 @@
                 .stock__bullet.stock__bullet--rooms
                   .stock__label Кол-во комнат
                   .stock__value 5 комнат
+              .stock__text
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porttitor dictum eros, ac tristique purus feugiat nec. Vivamus laoreet lobortis purus id ornare. Praesent et sagittis orci. In facilisis blandit orci, vel finibus elit dapibus ut. Donec odio elit, condimentum sit amet libero eu, imperdiet tincidunt sem. Suspendisse at aliquet ipsum. Nam gravida efficitur commodo. Cras ultrices non ipsum dictum molestie. In eu ultrices erat. Morbi porttitor nibh mattis tempor cursus. Vivamus dignissim risus id cursus scelerisque. Maecenas suscipit fermentum nibh sit amet consequat. Maecenas non nunc et enim consectetur dictum.
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porttitor dictum eros, ac tristique purus feugiat nec. Vivamus laoreet lobortis purus id ornare. Praesent et sagittis orci. In facilisis blandit orci, vel finibus elit dapibus ut. Donec odio elit, condimentum sit amet libero eu, imperdiet tincidunt sem. Suspendisse at aliquet ipsum. Nam gravida efficitur commodo. Cras ultrices non ipsum dictum molestie. In eu ultrices erat. Morbi porttitor nibh mattis tempor cursus. Vivamus dignissim risus id cursus scelerisque. Maecenas suscipit fermentum nibh sit amet consequat. Maecenas non nunc et enim consectetur dictum.
+
               .stock__button: a(href='#').btn.btn--block ПОСМОТРЕТЬ ПРОЕКТ
 
     button.stock__more: span Показать больше акций

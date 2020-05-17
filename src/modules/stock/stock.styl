@@ -39,7 +39,7 @@
     margin-bottom: 78px
     display: flex;
     align-items stretch
-    padding: 19px 51px 0
+    padding: 19px 51px 0 //30px
     flex-shrink 0
     @media (max-width: $breakpoint-lg - 1)
       flex-direction column
@@ -58,9 +58,13 @@
 
       .stock
         &__button
+          margin-left: auto;
           right: 51px
           @media (max-width: $breakpoint-lg - 1)
             right: auto;
+            margin-left: -175px
+          @media (max-width: $breakpoint-md - 1)
+            margin-left: auto
 
     &:nth-child(n+4)
       display: none;
@@ -70,17 +74,41 @@
   &__image
     margin-bottom: -38px
     width: 387px
-    height: 314px
     flex-shrink 0
-    background-position: 50% 50%;
-    background-size: cover;
     @media (max-width: $breakpoint-lg - 1)
       width: 100%
       margin-bottom: 0px
+
+  &__primary
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 314px
     @media (max-width: $breakpoint-md - 1)
       height: 214px
     @media (max-width: $breakpoint-sm - 1)
       height: 185px
+
+  &__images
+    margin: 0 -6px 0
+    display: flex;
+    flex-wrap wrap
+
+  &__secondary
+    //flex: 1
+    min-width 33.3333%
+    margin-top: 9px
+    padding: 0px 3px
+    cursor: pointer;
+
+    &:hover div
+      border-color: #dfb47a
+
+    & div
+      height: 70px
+      background-position: 50% 50%;
+      background-size: cover;
+      border: 3px solid transparent
+      anim()
 
   &__content
     padding-left: 57px
@@ -112,7 +140,7 @@
 
   &__bullets
     display: flex;
-    margin-bottom: 20px
+    //margin-bottom: 20px
     @media (max-width: $breakpoint-lg - 1)
       margin-bottom: 89px
     @media (max-width: $breakpoint-md - 1)
@@ -185,11 +213,29 @@
       margin-left: -175px
       bottom: -44px
     @media (max-width: $breakpoint-md - 1)
+      left: 0
+      margin: 20px auto 51px
       position: relative
       bottom: 0
-      margin-bottom: 51px
     @media (max-width: $breakpoint-sm - 1)
       margin-bottom: 43px
+      width: 100%
+      left: 0
+      right: 0
+      margin-left: 0
+
+  &__text
+    margin: 20px 0 60px
+    line-height: 2;
+    font-size: 18px;
+    font-weight: 300
+    @media (max-width: $breakpoint-lg - 1)
+      margin-top: -50px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-top: 0px
+
+    & > *:last-child
+      margin-bottom: 0
 
   &__more
     background: #fff
