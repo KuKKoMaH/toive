@@ -21,7 +21,7 @@
   &--active &
     &__item
       &:nth-child(n+4)
-        display: flex
+        display: block
 
     &__more
       display: none;
@@ -33,17 +33,19 @@
   &__items
     @media (max-width: $breakpoint-lg - 1)
       display: flex;
+      align-items flex-start
 
   &__item
     background: #ffffff
     margin-bottom: 78px
-    display: flex;
-    align-items stretch
-    padding: 19px 51px 0 //30px
+    padding: 19px 51px 0
     flex-shrink 0
+    position: relative;
+    cf()
+
     @media (max-width: $breakpoint-lg - 1)
       flex-direction column
-      padding: 22px 20px
+      padding: 22px 20px 0
       margin-bottom: 65px
     @media (max-width: $breakpoint-md - 1)
       padding: 6px
@@ -51,37 +53,37 @@
     @media (max-width: $breakpoint-sm - 1)
       margin-bottom: 41px
 
-    &:nth-child(2n)
-      flex-direction row-reverse
-      @media (max-width: $breakpoint-lg - 1)
-        flex-direction column
-
-      .stock
-        &__button
-          margin-left: auto;
-          right: 51px
-          @media (max-width: $breakpoint-lg - 1)
-            right: auto;
-            margin-left: -175px
-          @media (max-width: $breakpoint-md - 1)
-            margin-left: auto
-
     &:nth-child(n+4)
       display: none;
       @media (max-width: $breakpoint-lg - 1)
         display: flex;
 
   &__image
-    margin-bottom: -38px
     width: 387px
-    flex-shrink 0
+    float: left;
+    margin-right: 55px
+    margin-bottom: 38px
+    position: relative;
+    z-index: 1
+
+    ^[0]__item:nth-child(2n) &
+      float: right;
+      margin-right: 0
+      margin-left: 55px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-left: 0
+        float: none;
+
     @media (max-width: $breakpoint-lg - 1)
+      float: none;
       width: 100%
       margin-bottom: 0px
+      margin-right: 0
 
   &__primary
     background-position: 50% 50%;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     height: 314px
     @media (max-width: $breakpoint-md - 1)
       height: 214px
@@ -89,7 +91,7 @@
       height: 185px
 
   &__images
-    margin: 0 -6px 0
+    margin: 0 -3px 0
     display: flex;
     flex-wrap wrap
 
@@ -100,9 +102,6 @@
     padding: 0px 3px
     cursor: pointer;
 
-    &:hover div
-      border-color: #dfb47a
-
     & div
       height: 70px
       background-position: 50% 50%;
@@ -110,18 +109,18 @@
       border: 3px solid transparent
       anim()
 
+    &:hover div, &--active div
+      border-color: #dfb47a
+
   &__content
-    padding-left: 57px
-    flex: 1
-    position: relative;
+    margin-bottom: 80px
     @media (max-width: $breakpoint-lg - 1)
-      padding: 0 5px
+      margin-bottom: 40px
 
   &__title
     font-size: 30px
     padding-top: 22px
     margin-bottom: 44px
-    max-width 540px
     font-weight: 300
     @media (max-width: $breakpoint-lg - 1)
       padding-top: 28px
@@ -140,9 +139,9 @@
 
   &__bullets
     display: flex;
-    //margin-bottom: 20px
-    @media (max-width: $breakpoint-lg - 1)
-      margin-bottom: 89px
+    margin-bottom: 20px
+    //@media (max-width: $breakpoint-lg - 1)
+    //  margin-bottom: px
     @media (max-width: $breakpoint-md - 1)
       flex-wrap wrap
       justify-content center
@@ -208,24 +207,47 @@
     bottom: -33px
     z-index: 1
     width: 350px
+    left: 495px
+
+    ^[0]__item:nth-child(2n) &
+      left: auto;
+      right: 495px
+      @media (max-width: $breakpoint-lg - 1)
+        right: auto;
+
     @media (max-width: $breakpoint-lg - 1)
-      left: 50%
-      margin-left: -175px
-      bottom: -44px
-    @media (max-width: $breakpoint-md - 1)
-      left: 0
-      margin: 20px auto 51px
       position: relative
+      z-index: 1
+      left: 0
+      margin: 30px auto 0
       bottom: 0
     @media (max-width: $breakpoint-sm - 1)
-      margin-bottom: 43px
       width: 100%
-      left: 0
-      right: 0
-      margin-left: 0
+
+  //left: 50%
+  //margin-left: -175px
+  //bottom: -44px
+  //@media (max-width: $breakpoint-md - 1)
+  //  left: 0
+  //  margin: 20px auto 51px
+  //  bottom: 0
+  //@media (max-width: $breakpoint-sm - 1)
+  //  margin-bottom: 43px
+  //  width: 100%
+  //  left: 0
+  //  right: 0
+  //  margin-left: 0
+
+  //          margin-left: auto;
+  //          right: 51px
+  //          @media (max-width: $breakpoint-lg - 1)
+  //            right: auto;
+  //            margin-left: -175px
+  //          @media (max-width: $breakpoint-md - 1)
+  //            margin-left: auto
 
   &__text
-    margin: 20px 0 60px
+    //margin: 20px 0 60px
     line-height: 2;
     font-size: 18px;
     font-weight: 300
@@ -273,3 +295,8 @@
     @media (max-width: $breakpoint-lg - 1)
       display: flex;
       justify-content center
+      margin-top: 65px
+    @media (max-width: $breakpoint-md - 1)
+      margin-top: 33px
+    @media (max-width: $breakpoint-sm - 1)
+      margin-top: 41px

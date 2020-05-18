@@ -8,6 +8,7 @@ initSlider('.stock__slider', {
   loop:          true,
   wrapperClass:  'stock__items',
   slideClass:    'stock__item',
+  autoHeight:    true,
   navigation:    {
     prevEl: $('.stock__pagination .arrow--left')[0],
     nextEl: $('.stock__pagination .arrow--right')[0],
@@ -16,6 +17,8 @@ initSlider('.stock__slider', {
 
 $('.stock__secondary').on('click', ( e ) => {
   const $el = $(e.delegateTarget);
+  $('.stock__secondary').removeClass('stock__secondary--active');
+  $el.addClass('stock__secondary--active');
   const $parent = $el.parents('.stock__item');
-  $parent.find('.stock__primary').css('background-image', `url(${$el.data('image')})`)
+  $parent.find('.stock__primary').css('background-image', `url(${$el.data('image')})`);
 });
